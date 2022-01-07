@@ -148,7 +148,7 @@ function User() {
               </div>
               <CardBody>
                 <div className="author">
-                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                  <a href="#jesse" onClick={(e) => e.preventDefault()}>
                     <img
                       alt="..."
                       className="avatar border-gray"
@@ -169,7 +169,7 @@ function User() {
                 <Button
                   className="btn-neutral btn-icon btn-round"
                   color="default"
-                  href="#pablo"
+                  href="#jesse"
                   onClick={(e) => e.preventDefault()}
                   size="lg"
                 >
@@ -178,7 +178,7 @@ function User() {
                 <Button
                   className="btn-neutral btn-icon btn-round"
                   color="default"
-                  href="#pablo"
+                  href="#jesse"
                   onClick={(e) => e.preventDefault()}
                   size="lg"
                 >
@@ -187,7 +187,7 @@ function User() {
                 <Button
                   className="btn-neutral btn-icon btn-round"
                   color="default"
-                  href="#pablo"
+                  href="#jesse"
                   onClick={(e) => e.preventDefault()}
                   size="lg"
                 >
