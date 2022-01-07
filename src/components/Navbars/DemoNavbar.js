@@ -4,28 +4,15 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   Container,
-  InputGroup,
-  InputGroupText,
-  InputGroupAddon,
-  Input,
 } from "reactstrap";
-
 import TLI from "../../assets/img/transparentLogoIcon.png";
-
-import routes from "routes.js";
 
 function DemoNavbar(props) {
   const location = useLocation();
   const [isOpen, setIsOpen] = React.useState(false);
-  const [dropdownOpen, setDropdownOpen] = React.useState(false);
   const [color, setColor] = React.useState("transparent");
   const sidebarToggle = React.useRef();
   const toggle = () => {
@@ -35,38 +22,6 @@ function DemoNavbar(props) {
       setColor("white");
     }
     setIsOpen(!isOpen);
-  };
-  const dropdownToggle = (e) => {
-    setDropdownOpen(!dropdownOpen);
-  };
-  const getBrand = () => {
-    var name;
-    routes.map((prop, key) => {
-      if (prop.collapse) {
-        prop.views.map((prop, key) => {
-          if (prop.path === props.location.pathname) {
-            name = prop.name;
-          }
-          return null;
-        });
-      } else {
-        if (prop.redirect) {
-          if (prop.path === props.location.pathname) {
-            name = prop.name;
-          }
-        } else {
-          if (prop.path === props.location.pathname) {
-            name = prop.name;
-          }
-        }
-      }
-      return null;
-    });
-    return name;
-  };
-  const openSidebar = () => {
-    document.documentElement.classList.toggle("nav-open");
-    sidebarToggle.current.classList.toggle("toggled");
   };
   // function that adds color white/transparent to the navbar on resize (this is for the collapse)
   const updateColor = () => {
@@ -106,28 +61,15 @@ function DemoNavbar(props) {
     >
       <Container fluid>
         <div className="navbar-wrapper">
-          {/* Left side of nav bar on mobile */}
-          {/* <div className="navbar-toggle">
-            <button
-              type="button"
-              ref={sidebarToggle}
-              className="navbar-toggler"
-              onClick={() => openSidebar()}
-            >
-              <span className="navbar-toggler-bar bar1" />
-              <span className="navbar-toggler-bar bar2" />
-              <span className="navbar-toggler-bar bar3" />
-            </button>
-          </div> */}
-          {/* Left side of nav bar on mobile */}
           <div className="MVCLogo">
-            <img
-              style={{ height: "60px", width: "60px" }}
-              src={TLI}
-              alt="Logo"
-            />
+            <Link to="/admin/home" className="nav-link">
+              <img
+                style={{ margin: "0", height: "60px", width: "60px" }}
+                src={TLI}
+                alt="Logo"
+              />
+            </Link>
           </div>
-          <NavbarBrand href="/">{getBrand()}</NavbarBrand>
         </div>
         <NavbarToggler onClick={toggle}>
           <span className="navbar-toggler-bar navbar-kebab" />
@@ -136,49 +78,103 @@ function DemoNavbar(props) {
         </NavbarToggler>
         {/* Right side of top nav bar on mobile */}
         <Collapse isOpen={isOpen} navbar className="justify-content-end">
-          {/* search area in top navbar */}
-          {/* <form>
-            <InputGroup className="no-border">
-              <Input placeholder="Search..." />
-              <InputGroupAddon addonType="append">
-                <InputGroupText>
-                  <i className="now-ui-icons ui-1_zoom-bold" />
-                </InputGroupText>
-              </InputGroupAddon>
-            </InputGroup>
-          </form> */}
-          {/* search area in top navbar */}
           <Nav navbar>
+            {/* Home */}
             <NavItem>
-              <Link to="/admin/dashboard" className="nav-link">
-                <i className="now-ui-icons media-2_sound-wave" />
+              <Link to="/admin/home" className="nav-link">
+                <i
+                  style={{
+                    color: "lightseagreen",
+                    fontSize: "2em",
+                    fontWeight: "600",
+                  }}
+                  className="now-ui-icons shopping_shop"
+                />
                 <p>
-                  <span className="d-lg-none d-md-block">Stats</span>
+                  <span
+                    style={{
+                      color: "lightseagreen",
+                      fontSize: "2em",
+                      fontWeight: "600",
+                    }}
+                    className="d-lg-none d-md-block"
+                  >
+                    Home
+                  </span>
                 </p>
               </Link>
             </NavItem>
-            <Dropdown
-              nav
-              isOpen={dropdownOpen}
-              toggle={(e) => dropdownToggle(e)}
-            >
-              <DropdownToggle caret nav>
-                <i className="now-ui-icons location_world" />
-                <p>
-                  <span className="d-lg-none d-md-block">Some Actions</span>
-                </p>
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem tag="a">Action</DropdownItem>
-                <DropdownItem tag="a">Another Action</DropdownItem>
-                <DropdownItem tag="a">Something else here</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
+            {/* Form */}
             <NavItem>
-              <Link to="/admin/user-page" className="nav-link">
-                <i className="now-ui-icons users_single-02" />
+              <Link to="/admin/travel-form" className="nav-link">
+                <i
+                  style={{
+                    color: "lightseagreen",
+                    fontSize: "2em",
+                    fontWeight: "600",
+                  }}
+                  className="now-ui-icons files_paper"
+                />
                 <p>
-                  <span className="d-lg-none d-md-block">Account</span>
+                  <span
+                    style={{
+                      color: "lightseagreen",
+                      fontSize: "2em",
+                      fontWeight: "600",
+                    }}
+                    className="d-lg-none d-md-block"
+                  >
+                    Travel Form
+                  </span>
+                </p>
+              </Link>
+            </NavItem>
+            {/* Location */}
+            <NavItem>
+              <Link to="/admin/maps" className="nav-link">
+                <i
+                  style={{
+                    color: "lightseagreen",
+                    fontSize: "2em",
+                    fontWeight: "600",
+                  }}
+                  className="now-ui-icons location_pin"
+                />
+                <p>
+                  <span
+                    style={{
+                      color: "lightseagreen",
+                      fontSize: "2em",
+                      fontWeight: "600",
+                    }}
+                    className="d-lg-none d-md-block"
+                  >
+                    Our Location
+                  </span>
+                </p>
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/admin/about-us" className="nav-link">
+                <i
+                  style={{
+                    color: "lightseagreen",
+                    fontSize: "2em",
+                    fontWeight: "600",
+                  }}
+                  className="now-ui-icons users_single-02"
+                />
+                <p>
+                  <span
+                    style={{
+                      color: "lightseagreen",
+                      fontSize: "2em",
+                      fontWeight: "600",
+                    }}
+                    className="d-lg-none d-md-block"
+                  >
+                    About Us
+                  </span>
                 </p>
               </Link>
             </NavItem>

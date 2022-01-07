@@ -13,14 +13,10 @@ import {
   Col,
 } from "reactstrap";
 
-// core components
-// import PanelHeader from "components/PanelHeader/PanelHeader.js";
-
 function User() {
   return (
     <>
-      {/* <PanelHeader size="sm" /> */}
-      <div style={{marginTop: "10vh"}} className="content">
+      <div style={{ marginTop: "10vh" }} className="content">
         <Row>
           {/* <Col md="8"> */}
           <Col md="12">

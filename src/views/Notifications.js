@@ -14,9 +14,6 @@ import {
   Button,
 } from "reactstrap";
 
-// core components
-// import PanelHeader from "components/PanelHeader/PanelHeader.js";
-
 function Notifications() {
   const notificationAlert = React.useRef();
   const notify = (place) => {
@@ -60,24 +57,6 @@ function Notifications() {
   };
   return (
     <>
-      {/* <PanelHeader
-        content={
-          <div className="header text-center">
-            <h2 className="title">Notifications</h2>
-            <p className="category">
-              Please Checkout{" "}
-              <a
-                href="/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                The Full Documentation
-              </a>
-              .
-            </p>
-          </div>
-        }
-      /> */}
       <div style={{marginTop: "10vh"}} className="content">
         <NotificationAlert ref={notificationAlert} />
         <Row>
