@@ -1,6 +1,8 @@
 import React from "react";
 // react plugin for creating notifications over the dashboard
 import NotificationAlert from "react-notification-alert";
+import Styles from "./style.module.css";
+import CatDog from "../assets/img/catDog.png";
 
 // reactstrap components
 import {
@@ -57,16 +59,45 @@ function Notifications() {
   };
   return (
     <>
-      <div style={{marginTop: "10vh"}} className="content">
+      <div
+        style={{
+          height: "89.99vh",
+          marginTop: "0.01vh",
+          backgroundImage: `url(${CatDog})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          position: "relative",
+        }}
+        className="content"
+      >
+        <h1
+          className={Styles.title}
+          // style={{
+          //   color: "lightseagreen",
+          //   textAlign: "center",
+          //   lineHeight: "0.9em",
+          //   fontWeight: "900",
+          //   paddingTop: "10vh",
+          //   WebkitTextFillColor: "black"
+          // }}
+        >
+          {/* <span className={Styles.span}>Marietta Veterinary Clinic</span>{" "}
+          <span className={Styles.span}>Travel Services</span> */}
+          <span className={Styles.span}>MVC Travel Services</span>
+        </h1>
+      </div>
+      <div style={{ marginTop: "10vh" }} className="content">
         <NotificationAlert ref={notificationAlert} />
         <Row>
+          {/* First Col on left */}
           <Col md={6} xs={12}>
             <Card>
               <CardHeader>
-                <CardTitle tag="h4">Notifications Style</CardTitle>
+                {/* <CardTitle tag="h4">Notifications Style</CardTitle> */}
               </CardHeader>
               <CardBody>
-                <Alert color="info">
+                {/* <Alert color="info">
                   <span>This is a plain notification</span>
                 </Alert>
                 <Alert color="info" isOpen={true} toggle={() => {}}>
@@ -102,17 +133,20 @@ function Notifications() {
                     are always vertically aligned. This is a beautiful
                     notification. So you don't have to worry about the style.
                   </span>
-                </Alert>
+                </Alert> */}
               </CardBody>
             </Card>
           </Col>
+          {/* First Col on left */}
+
+          {/* Second Col on right */}
           <Col md={6} xs={12}>
             <Card>
               <CardHeader>
-                <CardTitle tag="h4">Notification states</CardTitle>
+                {/* <CardTitle tag="h4">Notification states</CardTitle> */}
               </CardHeader>
               <CardBody>
-                <Alert color="primary" isOpen={true} toggle={() => {}}>
+                {/* <Alert color="primary" isOpen={true} toggle={() => {}}>
                   <span>
                     <b> Primary - </b> This is a regular notification made with
                     color="primary"
@@ -141,92 +175,101 @@ function Notifications() {
                     <b> Danger - </b> This is a regular notification made with
                     color="danger"
                   </span>
-                </Alert>
+                </Alert> */}
               </CardBody>
             </Card>
           </Col>
+          {/* Second Col on right */}
+
+          {/* Second Row */}
           <Col md={12} xs={12}>
             <Card>
               <CardBody>
                 <div className="places-buttons">
                   <Row>
                     <Col md={6} className="ml-auto mr-auto text-center">
-                      <CardTitle tag="h4">
+                      {/* <CardTitle tag="h4">
                         Notifications Places
                         <p className="category">Click to view notifications</p>
-                      </CardTitle>
+                      </CardTitle> */}
                     </Col>
                   </Row>
+                  {/* First Row in big container */}
                   <Row>
                     <Col lg={8} xs={12} className="ml-auto mr-auto">
                       <Row>
                         <Col md={4} xs={12}>
-                          <Button
+                          {/* <Button
                             color="primary"
                             block
                             onClick={() => notify("tl")}
                           >
                             Top Left
-                          </Button>
+                          </Button> */}
                         </Col>
                         <Col md={4} xs={12}>
-                          <Button
+                          {/* <Button
                             color="primary"
                             block
                             onClick={() => notify("tc")}
                           >
                             Top Center
-                          </Button>
+                          </Button> */}
                         </Col>
                         <Col md={4} xs={12}>
-                          <Button
+                          {/* <Button
                             color="primary"
                             block
                             onClick={() => notify("tr")}
                           >
                             Top Right
-                          </Button>
+                          </Button> */}
                         </Col>
                       </Row>
                     </Col>
                   </Row>
+                  {/* First Row in big container */}
+
+                  {/* Second row in big container */}
                   <Row>
                     <Col lg={8} xs={12} className="ml-auto mr-auto">
                       <Row>
                         <Col md={4} xs={12}>
-                          <Button
+                          {/* <Button
                             color="primary"
                             block
                             onClick={() => notify("bl")}
                           >
                             Bottom Left
-                          </Button>
+                          </Button> */}
                         </Col>
                         <Col md={4} xs={12}>
-                          <Button
+                          {/* <Button
                             color="primary"
                             block
                             onClick={() => notify("bc")}
                           >
                             Bottom Center
-                          </Button>
+                          </Button> */}
                         </Col>
                         <Col md={4} xs={12}>
-                          <Button
+                          {/* <Button
                             color="primary"
                             block
                             onClick={() => notify("br")}
                           >
                             Bottom Right
-                          </Button>
+                          </Button> */}
                         </Col>
                       </Row>
                     </Col>
                   </Row>
+                  {/* Second row in big container */}
                 </div>
               </CardBody>
             </Card>
           </Col>
+          {/* Second Row */}
         </Row>
       </div>
     </>

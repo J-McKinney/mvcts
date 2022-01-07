@@ -1,0 +1,15 @@
+.title {
+  color: lightseagreen;
+  text-align: center;
+  z-index: 1000;
+  font-weight: 900;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-color: lightseagreen;
+  -webkit-text-stroke-width: 2px;
+  padding-top: 5vh;
+}
+
+.span {
+  font-weight: 500;
+  text-transform: uppercase;
+}

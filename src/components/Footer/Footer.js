@@ -12,58 +12,47 @@ function Footer(props) {
       <Container fluid={props.fluid ? true : false}>
         <nav>
           <div className="button-container">
-            <ul>
-              <li>
-                <Button
-                  className="btn-neutral btn-icon btn-round"
-                  color="default"
-                  href="https://www.facebook.com/MariettaVetClinic/"
-                  onClick={(e) => e.preventDefault()}
-                  size="lg"
-                >
-                  <i
-                    style={{ color: "steelblue", marginTop: "6px" }}
-                    className="fab fa-facebook-f fa-3x"
-                  />
-                </Button>
-              </li>
-              <li>
-                <Button
-                  className="btn-neutral btn-icon btn-round"
-                  color="default"
-                  href="https://www.linkedin.com/company/marietta-vet-clinic/"
-                  onClick={(e) => e.preventDefault()}
-                  size="lg"
-                >
-                  <i
-                    style={{ color: "royalblue", marginTop: "6px" }}
-                    className="fab fa-linkedin-in fa-3x"
-                  />
-                </Button>
-              </li>
-              <li>
-                <Button
-                  className="btn-neutral btn-icon btn-round"
-                  color="default"
-                  href="https://www.google.com/maps?cid=14756440109326445849"
-                  onClick={(e) => e.preventDefault()}
-                  size="lg"
-                >
-                  <i
-                    style={{
-                      background:
-                        "conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat",
-                      WebkitBackgroundClip: "text",
-                      backgroundClip: "text",
-                      color: "transparent",
-                      WebkitTextFillColor: "transparent",
-                      marginTop: "6px",
-                    }}
-                    className="fab fa-google fa-3x"
-                  ></i>
-                </Button>
-              </li>
-            </ul>
+            <Button
+              className="btn-neutral btn-icon btn-round"
+              color="default"
+              href="https://www.facebook.com/MariettaVetClinic/"
+              size="lg"
+            >
+              <i
+                style={{ color: "steelblue", marginTop: "6px" }}
+                className="fab fa-facebook-f fa-3x"
+              />
+            </Button>
+            <Button
+              className="btn-neutral btn-icon btn-round"
+              color="default"
+              href="https://www.linkedin.com/company/marietta-vet-clinic/"
+              size="lg"
+            >
+              <i
+                style={{ color: "royalblue", marginTop: "6px" }}
+                className="fab fa-linkedin-in fa-3x"
+              />
+            </Button>
+            <Button
+              className="btn-neutral btn-icon btn-round"
+              color="default"
+              href="https://www.google.com/maps?cid=14756440109326445849"
+              size="lg"
+            >
+              <i
+                style={{
+                  background:
+                    "conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  color: "transparent",
+                  WebkitTextFillColor: "transparent",
+                  marginTop: "6px",
+                }}
+                className="fab fa-google fa-3x"
+              ></i>
+            </Button>
           </div>
           {/*  */}
           <br />
