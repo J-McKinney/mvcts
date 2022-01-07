@@ -26,6 +26,8 @@ import {
 // core components
 import PanelHeader from "components/PanelHeader/PanelHeader.js";
 
+// import CatDog from "../assets/img/catDog.png";
+
 import {
   dashboardPanelChart,
   dashboardShippedProductsChart,
@@ -43,6 +45,7 @@ function Dashboard() {
             data={dashboardPanelChart.data}
             options={dashboardPanelChart.options}
           />
+          // <img src={CatDog} alt="Cat and Dog" />
         }
       />
       <div className="content">
