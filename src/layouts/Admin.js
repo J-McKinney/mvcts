@@ -1,11 +1,6 @@
 import React from "react";
-// javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
-
-// reactstrap components
 import { Route, Switch, Redirect, useLocation } from "react-router-dom";
-
-// core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
@@ -19,7 +14,7 @@ function Admin(props) {
   const location = useLocation();
   // Below changes the color of the side nav bar
   const [backgroundColor, setBackgroundColor] = React.useState("blue");
-  // 
+  //
   const mainPanel = React.useRef();
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
