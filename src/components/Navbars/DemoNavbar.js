@@ -150,7 +150,7 @@ function DemoNavbar(props) {
           {/* search area in top navbar */}
           <Nav navbar>
             <NavItem>
-              <Link to="#jesse" className="nav-link">
+              <Link to="/admin/dashboard" className="nav-link">
                 <i className="now-ui-icons media-2_sound-wave" />
                 <p>
                   <span className="d-lg-none d-md-block">Stats</span>
@@ -175,7 +175,7 @@ function DemoNavbar(props) {
               </DropdownMenu>
             </Dropdown>
             <NavItem>
-              <Link to="#jesse" className="nav-link">
+              <Link to="/admin/user-page" className="nav-link">
                 <i className="now-ui-icons users_single-02" />
                 <p>
                   <span className="d-lg-none d-md-block">Account</span>
