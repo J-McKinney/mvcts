@@ -1,20 +1,3 @@
-/*!
-
-=========================================================
-* Now UI Dashboard React - v1.5.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 /*eslint-disable*/
 import React from "react";
 import { Container } from "reactstrap";
@@ -29,15 +12,15 @@ function Footer(props) {
           <ul>
             <li>
               <a
-                href="https://www.creative-tim.com?ref=nudr-footer"
+                href="/"
                 target="_blank"
               >
-                Creative Tim
+                Jesse
               </a>
             </li>
             <li>
               <a
-                href="https://presentation.creative-tim.com?ref=nudr-footer"
+                href="/"
                 target="_blank"
               >
                 About Us
@@ -45,7 +28,7 @@ function Footer(props) {
             </li>
             <li>
               <a
-                href="https://blog.creative-tim.com?ref=nudr-footer"
+                href="/"
                 target="_blank"
               >
                 Blog
@@ -56,19 +39,19 @@ function Footer(props) {
         <div className="copyright">
           &copy; {1900 + new Date().getYear()}, Designed by{" "}
           <a
-            href="https://www.invisionapp.com"
+            href="/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Invision
+            Jesse
           </a>
           . Coded by{" "}
           <a
-            href="https://www.creative-tim.com?ref=nudr-footer"
+            href="/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Creative Tim
+          Jesse
           </a>
           .
         </div>
