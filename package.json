@@ -1,5 +1,7 @@
 {
   "name": "mvcts",
+  "Author": "Jesse McKinney",
+  "homepage": "https://j-mckinney.github.io/mvcts/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
