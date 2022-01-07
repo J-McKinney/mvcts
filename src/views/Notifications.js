@@ -15,7 +15,7 @@ import {
 } from "reactstrap";
 
 // core components
-import PanelHeader from "components/PanelHeader/PanelHeader.js";
+// import PanelHeader from "components/PanelHeader/PanelHeader.js";
 
 function Notifications() {
   const notificationAlert = React.useRef();
@@ -60,7 +60,7 @@ function Notifications() {
   };
   return (
     <>
-      <PanelHeader
+      {/* <PanelHeader
         content={
           <div className="header text-center">
             <h2 className="title">Notifications</h2>
@@ -77,8 +77,8 @@ function Notifications() {
             </p>
           </div>
         }
-      />
-      <div className="content">
+      /> */}
+      <div style={{marginTop: "10vh"}} className="content">
         <NotificationAlert ref={notificationAlert} />
         <Row>
           <Col md={6} xs={12}>

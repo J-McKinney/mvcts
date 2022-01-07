@@ -14,15 +14,16 @@ import {
 } from "reactstrap";
 
 // core components
-import PanelHeader from "components/PanelHeader/PanelHeader.js";
+// import PanelHeader from "components/PanelHeader/PanelHeader.js";
 
 function User() {
   return (
     <>
-      <PanelHeader size="sm" />
-      <div className="content">
+      {/* <PanelHeader size="sm" /> */}
+      <div style={{marginTop: "10vh"}} className="content">
         <Row>
-          <Col md="8">
+          {/* <Col md="8"> */}
+          <Col md="12">
             <Card>
               <CardHeader>
                 <h5 className="title">Edit Profile</h5>
@@ -141,7 +142,8 @@ function User() {
               </CardBody>
             </Card>
           </Col>
-          <Col md="4">
+          {/* right card user profile */}
+          {/* <Col md="4">
             <Card className="card-user">
               <div className="image">
                 <img alt="..." src={require("assets/img/bg5.jpg").default} />
@@ -195,7 +197,8 @@ function User() {
                 </Button>
               </div>
             </Card>
-          </Col>
+          </Col> */}
+          {/* right card user profile */}
         </Row>
       </div>
     </>

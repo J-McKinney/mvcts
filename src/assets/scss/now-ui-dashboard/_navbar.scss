@@ -71,10 +71,11 @@
     }
 
     &.navbar-absolute{
-        position: absolute;
+        position: sticky;
         width: 100%;
         padding-top: 10px;
         z-index: 1029;
+        background: black !important;
     }
 
     .documentation &{
@@ -219,7 +220,8 @@
     }
 
     &.navbar-transparent{
-        background-color: $transparent-bg !important;
+        // background-color: $transparent-bg !important;
+        background-color: dimgray !important;
         box-shadow: none;
         color: $white-color;
     }

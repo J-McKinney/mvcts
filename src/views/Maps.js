@@ -4,7 +4,7 @@ import React from "react";
 import { Row, Col, Card, CardHeader, CardBody } from "reactstrap";
 
 // core components
-import PanelHeader from "components/PanelHeader/PanelHeader.js";
+// import PanelHeader from "components/PanelHeader/PanelHeader.js";
 
 const MapWrapper = () => {
   const mapRef = React.useRef(null);
@@ -126,8 +126,8 @@ const MapWrapper = () => {
 function FullScreenMap() {
   return (
     <>
-      <PanelHeader size="sm" />
-      <div className="content">
+      {/* <PanelHeader size="sm" /> */}
+      <div style={{marginTop: "10vh"}} className="content">
         <Row>
           <Col xs={12}>
             <Card>

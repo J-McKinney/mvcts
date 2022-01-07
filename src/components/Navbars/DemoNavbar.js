@@ -18,6 +18,8 @@ import {
   Input,
 } from "reactstrap";
 
+import TLI from "../../assets/img/transparentLogoIcon.png";
+
 import routes from "routes.js";
 
 function DemoNavbar(props) {
@@ -104,7 +106,8 @@ function DemoNavbar(props) {
     >
       <Container fluid>
         <div className="navbar-wrapper">
-          <div className="navbar-toggle">
+          {/* Left side of nav bar on mobile */}
+          {/* <div className="navbar-toggle">
             <button
               type="button"
               ref={sidebarToggle}
@@ -115,6 +118,14 @@ function DemoNavbar(props) {
               <span className="navbar-toggler-bar bar2" />
               <span className="navbar-toggler-bar bar3" />
             </button>
+          </div> */}
+          {/* Left side of nav bar on mobile */}
+          <div className="MVCLogo">
+            <img
+              style={{ height: "60px", width: "60px" }}
+              src={TLI}
+              alt="Logo"
+            />
           </div>
           <NavbarBrand href="/">{getBrand()}</NavbarBrand>
         </div>
@@ -123,8 +134,10 @@ function DemoNavbar(props) {
           <span className="navbar-toggler-bar navbar-kebab" />
           <span className="navbar-toggler-bar navbar-kebab" />
         </NavbarToggler>
+        {/* Right side of top nav bar on mobile */}
         <Collapse isOpen={isOpen} navbar className="justify-content-end">
-          <form>
+          {/* search area in top navbar */}
+          {/* <form>
             <InputGroup className="no-border">
               <Input placeholder="Search..." />
               <InputGroupAddon addonType="append">
@@ -133,7 +146,8 @@ function DemoNavbar(props) {
                 </InputGroupText>
               </InputGroupAddon>
             </InputGroup>
-          </form>
+          </form> */}
+          {/* search area in top navbar */}
           <Nav navbar>
             <NavItem>
               <Link to="#jesse" className="nav-link">

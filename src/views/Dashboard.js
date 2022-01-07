@@ -24,7 +24,7 @@ import {
 } from "reactstrap";
 
 // core components
-import PanelHeader from "components/PanelHeader/PanelHeader.js";
+// import PanelHeader from "components/PanelHeader/PanelHeader.js";
 
 // import CatDog from "../assets/img/catDog.png";
 
@@ -38,7 +38,7 @@ import {
 function Dashboard() {
   return (
     <>
-      <PanelHeader
+      {/* <PanelHeader
         size="lg"
         content={
           <Line
@@ -47,8 +47,8 @@ function Dashboard() {
           />
           // <img src={CatDog} alt="Cat and Dog" />
         }
-      />
-      <div className="content">
+      /> */}
+      <div style={{marginTop: "10vh"}} className="content">
         <Row>
           <Col xs={12} md={4}>
             <Card className="card-chart">
