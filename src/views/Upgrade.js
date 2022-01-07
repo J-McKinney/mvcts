@@ -106,7 +106,7 @@ function Upgrade() {
                       <td className="text-center">
                         <Button
                           target="_blank"
-                          href="https://www.creative-tim.com/product/now-ui-dashboard-pro-react/?ref=nudr-upgrade"
+                          href="/"
                           color="info"
                           className="btn-round"
                         >

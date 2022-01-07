@@ -9,7 +9,7 @@ import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
-import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
+// import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import routes from "routes.js";
 
@@ -17,7 +17,9 @@ var ps;
 
 function Admin(props) {
   const location = useLocation();
+  // Below changes the color of the side nav bar
   const [backgroundColor, setBackgroundColor] = React.useState("blue");
+  // 
   const mainPanel = React.useRef();
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
@@ -58,10 +60,10 @@ function Admin(props) {
         </Switch>
         <Footer fluid />
       </div>
-      <FixedPlugin
+      {/* <FixedPlugin
         bgColor={backgroundColor}
         handleColorClick={handleColorClick}
-      />
+      /> */}
     </div>
   );
 }

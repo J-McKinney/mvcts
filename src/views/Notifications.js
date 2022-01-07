@@ -67,7 +67,7 @@ function Notifications() {
             <p className="category">
               Please Checkout{" "}
               <a
-                href="https://github.com/creativetimofficial/react-notification-alert"
+                href="/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
