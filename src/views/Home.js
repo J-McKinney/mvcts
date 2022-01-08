@@ -6,6 +6,9 @@ import DIC from "../assets/img/dogInCrate.jpg";
 import Crew from "../assets/img/GroupOfficePic.jpg";
 import Door from "../assets/img/MVCFrontDoor.jpeg";
 import JP from "../assets/img/JPeckich.jpg";
+import BSD from "../assets/img/backSeatDog.jpg";
+import CC from "../assets/img/catCase.jpg";
+import PP from "../assets/img/passports.jpg";
 
 // reactstrap components
 import {
@@ -35,7 +38,7 @@ function Home() {
           }}
           className="content"
         ></div>
-        <Row>
+        {/* <Row>
           <Col lg={12} md={12} sm={12}>
             <h1 id={Styles.title}>
               <span id={Styles.span}>
@@ -43,7 +46,7 @@ function Home() {
               </span>
             </h1>
           </Col>
-        </Row>
+        </Row> */}
         <div style={{ marginTop: "10vh" }} className="content">
           <Row
             style={{
@@ -137,16 +140,33 @@ function Home() {
                     </Row>
                     {/* First Row in big container */}
                     <Row>
-                      <Col lg={8} xs={12} className="ml-auto mr-auto">
+                      <Col xl={12} lg={12} xs={12} className="ml-auto mr-auto">
                         <Row>
-                          <Col md={4} xs={12}>
-                            <img className={Styles.crew} src={Crew} alt="..." />
+                          <Col xl={4} lg={12} md={12} xs={12}>
+                            <img
+                              className={Styles.crew}
+                              src={Crew}
+                              alt="MVC Crew"
+                            />
                           </Col>
-                          <Col md={4} xs={12}>
-                            <img className={Styles.door} src={Door} alt="..." />
+                          <Col xl={4} lg={12} md={12} xs={12}>
+                            {/* <img className={Styles.door} src={Door} alt="..." /> */}
+                            <h3>
+                              Are you looking for a veterinarian you can trust
+                              to care for your furry friend? Our doctor and
+                              clinic are obsessed with animals and treat each
+                              pet like family. Each pet has its own unique
+                              needs, personality, and preferences, and we take
+                              the time to truly understand how to best care for
+                              your cat or dog.
+                            </h3>
                           </Col>
-                          <Col md={4} xs={12}>
-                            <img className={Styles.jp} src={JP} alt="..." />
+                          <Col xl={4} lg={12} md={12} xs={12}>
+                            <img
+                              className={Styles.jp}
+                              src={JP}
+                              alt="Julian Peckich"
+                            />
                           </Col>
                         </Row>
                       </Col>
@@ -155,16 +175,36 @@ function Home() {
 
                     {/* Second row in big container */}
                     <Row>
-                      <Col lg={8} xs={12} className="ml-auto mr-auto">
+                      <Col xl={12} lg={12} xs={12} className="ml-auto mr-auto">
                         <Row>
-                          <Col md={4} xs={12}>
-                            <img className={Styles.crew} src={Crew} alt="..." />
+                          <Col xl={4} lg={12} md={12} xs={12}>
+                            <h3>
+                              Our full-service veterinarian clinic in Marietta,
+                              GA, takes great pride in caring for your pets and
+                              are dedicated to protecting their health with the
+                              utmost care and compassion. We understand that
+                              going to the vet can be stressful for both you and
+                              your pet, and we strive to create a pleasant
+                              experience for all.
+                            </h3>
                           </Col>
-                          <Col md={4} xs={12}>
-                            <img className={Styles.door} src={Door} alt="..." />
+                          <Col xl={4} lg={12} md={12} xs={12}>
+                            <img
+                              className={Styles.door}
+                              src={Door}
+                              alt="Front door of MVC"
+                            />
                           </Col>
-                          <Col md={4} xs={12}>
-                            <img className={Styles.jp} src={JP} alt="..." />
+                          <Col xl={4} lg={12} md={12} xs={12}>
+                            <h3>
+                              At Marietta Vet Clinic, we offer comprehensive,
+                              high-quality care at our state-of-the-art
+                              facility. We strive to create the most welcoming,
+                              pleasant experience for you and your furry friend.
+                              Dr. Peckich is affiliated with the American
+                              Veterinary Medical Association and has been
+                              providing specialized care for nearly ten years.{" "}
+                            </h3>
                           </Col>
                         </Row>
                       </Col>
@@ -247,7 +287,7 @@ function Home() {
                           }}
                           tag="h4"
                         >
-                          Meet our Veterinarian
+                          What to Know Before Moving Pets
                           <p
                             style={{
                               color: "lightseagreen",
@@ -256,23 +296,47 @@ function Home() {
                             }}
                             className="category"
                           >
-                            A DOCTOR WHO TRULY CARES
+                            Important Documents
                           </p>
                         </CardTitle>
                       </Col>
                     </Row>
                     {/* First Row in big container */}
                     <Row>
-                      <Col lg={8} xs={12} className="ml-auto mr-auto">
+                      <Col
+                        xl={12}
+                        lg={12}
+                        md={12}
+                        xs={12}
+                        className="ml-auto mr-auto"
+                      >
                         <Row>
-                          <Col md={4} xs={12}>
-                            <img className={Styles.crew} src={Crew} alt="..." />
+                          <Col xl={4} lg={12} md={12} xs={12}>
+                            <h3>
+                              Once in the United States, or if you are traveling
+                              only within the United States, your pets may need
+                              to travel by ground transportation. This would
+                              depend on a number of factors including
+                              destination, current weather, breed and size of
+                              your pet.{" "}
+                            </h3>
                           </Col>
-                          <Col md={4} xs={12}>
-                            <img className={Styles.door} src={Door} alt="..." />
+                          <Col xl={4} lg={12} md={12} xs={12}>
+                            <img
+                              className={Styles.cc}
+                              src={CC}
+                              alt="Cat in suit case"
+                            />
                           </Col>
-                          <Col md={4} xs={12}>
-                            <img className={Styles.jp} src={JP} alt="..." />
+                          <Col xl={4} lg={12} md={12} xs={12}>
+                            <h3>
+                              Make sure your pet is vaccinated against rabies.
+                              While most states within the United States will
+                              accept any valid rabies vaccination, some may
+                              require a vaccine that is older than 21 days. Pets
+                              should travel with an original Rabies Certificate
+                              signed by the vet.
+                            </h3>
                           </Col>
                         </Row>
                       </Col>
@@ -281,16 +345,35 @@ function Home() {
 
                     {/* Second row in big container */}
                     <Row>
-                      <Col lg={8} xs={12} className="ml-auto mr-auto">
+                      <Col
+                        xl={12}
+                        lg={12}
+                        md={12}
+                        xs={12}
+                        className="ml-auto mr-auto"
+                      >
                         <Row>
-                          <Col md={4} xs={12}>
-                            <img className={Styles.crew} src={Crew} alt="..." />
+                          <Col xl={4} lg={12} md={12} xs={12}>
+                            <img
+                              className={Styles.bsd}
+                              src={BSD}
+                              alt="Dog in a hatchback"
+                            />
                           </Col>
-                          <Col md={4} xs={12}>
-                            <img className={Styles.door} src={Door} alt="..." />
+                          <Col xl={4} lg={12} md={12} xs={12}>
+                            <h3>
+                              Moving with pets in tow? We can help! Meet our
+                              experts and see how we can make this portion of
+                              your relocation as stress-free as possible so that
+                              you can focus on your human move.
+                            </h3>
                           </Col>
-                          <Col md={4} xs={12}>
-                            <img className={Styles.jp} src={JP} alt="..." />
+                          <Col xl={4} lg={12} md={12} xs={12}>
+                            <img
+                              className={Styles.pp}
+                              src={PP}
+                              alt="Cheers with your passports"
+                            />
                           </Col>
                         </Row>
                       </Col>

@@ -16,16 +16,35 @@
 #span {
   font-weight: 500;
   text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 40vw;
+  z-index: 1200;
+  margin: 0;
 }
 
 .DCW,
 .DIC,
 .jp,
 .door,
-.crew {
+.crew,
+.bsd,
+.cc,
+.pp {
   border-radius: 15px;
   box-shadow: -1px -1px 2px 2px hsl(0, 0%, 79%), 5px 5px 5px 3px hsl(0, 0%, 39%);
   margin-bottom: 2vh;
+}
+
+.jp,
+.door,
+.crew,
+.bsd,
+.cc,
+.pp {
+  height: 360px;
+  width: 500px;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 1504px) {
