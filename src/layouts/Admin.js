@@ -3,6 +3,7 @@ import PerfectScrollbar from "perfect-scrollbar";
 import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import Footer from "components/Footer/Footer.js";
+import Styles from "../views/style.module.css";
 import routes from "routes.js";
 
 var ps;
@@ -49,6 +50,9 @@ function Admin(props) {
           })}
           <Redirect from="/mvcts" to="/mvcts/home" />
         </Switch>
+        <h2 className="align-self-center" id={Styles.title}>
+          <span id={Styles.span}>MVC Travel Services</span>
+        </h2>
         <Footer fluid />
       </div>
     </div>

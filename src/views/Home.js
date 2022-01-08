@@ -38,15 +38,6 @@ function Home() {
           }}
           className="content"
         ></div>
-        {/* <Row>
-          <Col lg={12} md={12} sm={12}>
-            <h1 id={Styles.title}>
-              <span id={Styles.span}>
-                Marietta Veterinary Clinic Travel Services
-              </span>
-            </h1>
-          </Col>
-        </Row> */}
         <div style={{ marginTop: "10vh" }} className="content">
           <Row
             style={{
@@ -151,7 +142,7 @@ function Home() {
                           </Col>
                           <Col xl={4} lg={12} md={12} xs={12}>
                             {/* <img className={Styles.door} src={Door} alt="..." /> */}
-                            <h3>
+                            <h3 id={Styles.h3}>
                               Are you looking for a veterinarian you can trust
                               to care for your furry friend? Our doctor and
                               clinic are obsessed with animals and treat each
@@ -178,7 +169,7 @@ function Home() {
                       <Col xl={12} lg={12} xs={12} className="ml-auto mr-auto">
                         <Row>
                           <Col xl={4} lg={12} md={12} xs={12}>
-                            <h3>
+                            <h3 id={Styles.h3}>
                               Our full-service veterinarian clinic in Marietta,
                               GA, takes great pride in caring for your pets and
                               are dedicated to protecting their health with the
@@ -196,7 +187,7 @@ function Home() {
                             />
                           </Col>
                           <Col xl={4} lg={12} md={12} xs={12}>
-                            <h3>
+                            <h3 id={Styles.h3}>
                               At Marietta Vet Clinic, we offer comprehensive,
                               high-quality care at our state-of-the-art
                               facility. We strive to create the most welcoming,
@@ -312,7 +303,7 @@ function Home() {
                       >
                         <Row>
                           <Col xl={4} lg={12} md={12} xs={12}>
-                            <h3>
+                            <h3 id={Styles.h3}>
                               Once in the United States, or if you are traveling
                               only within the United States, your pets may need
                               to travel by ground transportation. This would
@@ -329,7 +320,7 @@ function Home() {
                             />
                           </Col>
                           <Col xl={4} lg={12} md={12} xs={12}>
-                            <h3>
+                            <h3 id={Styles.h3}>
                               Make sure your pet is vaccinated against rabies.
                               While most states within the United States will
                               accept any valid rabies vaccination, some may
@@ -361,7 +352,7 @@ function Home() {
                             />
                           </Col>
                           <Col xl={4} lg={12} md={12} xs={12}>
-                            <h3>
+                            <h3 id={Styles.h3}>
                               Moving with pets in tow? We can help! Meet our
                               experts and see how we can make this portion of
                               your relocation as stress-free as possible so that

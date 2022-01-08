@@ -62,18 +62,15 @@ function DemoNavbar(props) {
               (color === "transparent" ? "navbar-transparent " : "")
         }
       >
-        {/* <h3 id={Styles.title}>
-          <span id={Styles.span}>
-            MVC Travel Services
-          </span>
-        </h3> */}
         <Container fluid>
           <div className="navbar-wrapper">
             <div className="MVCLogo">
               <Link to="/mvcts/home" className="nav-link">
                 <img
-                  style={{ margin: "0", height: "60px", width: "60px" }}
-                  src={TLI}
+                  // style={{ margin: "0", height: "60px", width: "60px" }}
+                  // src={TLI}
+                  style={{ margin: "0", height: "70px", width: "70px" }}
+                  src={`https://d1l9wtg77iuzz5.cloudfront.net/assets/5637/233039/original_logo.svg?1527722828`}
                   alt="Logo"
                 />
               </Link>
@@ -90,15 +87,16 @@ function DemoNavbar(props) {
               {/* Home */}
               <NavItem>
                 <Link to="/mvcts/home" className="nav-link">
-                  <i
+                  <h5
                     style={{
                       color: "lightseagreen",
                       fontSize: "2em",
                       fontWeight: "600",
                     }}
-                    id="tooltip907509347"
-                    className="now-ui-icons shopping_shop"
-                  />
+                    id={Styles.h5}
+                  >
+                    Home
+                  </h5>
                   <p>
                     <span
                       style={{
@@ -108,30 +106,32 @@ function DemoNavbar(props) {
                       }}
                       className="d-lg-none d-md-block"
                     >
+                      <i
+                        style={{
+                          color: "lightseagreen",
+                          fontSize: "1em",
+                          fontWeight: "600",
+                        }}
+                        className="now-ui-icons shopping_shop"
+                      />{" "}
                       Home
                     </span>
                   </p>
-                  <UncontrolledTooltip
-                    placement="bottom"
-                    delay={1}
-                    target="tooltip907509347"
-                  >
-                    Home
-                  </UncontrolledTooltip>
                 </Link>
               </NavItem>
               {/* Form */}
               <NavItem>
                 <Link to="/mvcts/travel-form" className="nav-link">
-                  <i
+                  <h5
                     style={{
                       color: "lightseagreen",
                       fontSize: "2em",
                       fontWeight: "600",
                     }}
-                    id="tooltip907509346"
-                    className="now-ui-icons files_paper"
-                  />
+                    id={Styles.h5}
+                  >
+                    Travel Form
+                  </h5>
                   <p>
                     <span
                       style={{
@@ -141,30 +141,32 @@ function DemoNavbar(props) {
                       }}
                       className="d-lg-none d-md-block"
                     >
+                      <i
+                        style={{
+                          color: "lightseagreen",
+                          fontSize: "1em",
+                          fontWeight: "600",
+                        }}
+                        className="now-ui-icons files_paper"
+                      />{" "}
                       Travel Form
                     </span>
                   </p>
-                  <UncontrolledTooltip
-                    placement="bottom"
-                    delay={1}
-                    target="tooltip907509346"
-                  >
-                    Travel Form
-                  </UncontrolledTooltip>
                 </Link>
               </NavItem>
               {/* Location */}
               <NavItem>
                 <Link to="/mvcts/maps" className="nav-link">
-                  <i
+                  <h5
                     style={{
                       color: "lightseagreen",
                       fontSize: "2em",
                       fontWeight: "600",
                     }}
-                    id="tooltip907509345"
-                    className="now-ui-icons location_pin"
-                  />
+                    id={Styles.h5}
+                  >
+                    Our Location
+                  </h5>
                   <p>
                     <span
                       style={{
@@ -174,29 +176,31 @@ function DemoNavbar(props) {
                       }}
                       className="d-lg-none d-md-block"
                     >
+                      <i
+                        style={{
+                          color: "lightseagreen",
+                          fontSize: "1em",
+                          fontWeight: "600",
+                        }}
+                        className="now-ui-icons location_pin"
+                      />{" "}
                       Our Location
                     </span>
                   </p>
-                  <UncontrolledTooltip
-                    placement="bottom"
-                    delay={1}
-                    target="tooltip907509345"
-                  >
-                    Our Location
-                  </UncontrolledTooltip>
                 </Link>
               </NavItem>
               <NavItem>
                 <Link to="/mvcts/about-us" className="nav-link">
-                  <i
+                  <h5
                     style={{
                       color: "lightseagreen",
                       fontSize: "2em",
                       fontWeight: "600",
                     }}
-                    id="tooltip907509344"
-                    className="now-ui-icons users_single-02"
-                  />
+                    id={Styles.h5}
+                  >
+                    About Us
+                  </h5>
                   <p>
                     <span
                       style={{
@@ -206,16 +210,17 @@ function DemoNavbar(props) {
                       }}
                       className="d-lg-none d-md-block"
                     >
+                      <i
+                        style={{
+                          color: "lightseagreen",
+                          fontSize: "1em",
+                          fontWeight: "600",
+                        }}
+                        className="now-ui-icons users_single-02"
+                      />{" "}
                       About Us
                     </span>
                   </p>
-                  <UncontrolledTooltip
-                    placement="bottom"
-                    delay={1}
-                    target="tooltip907509344"
-                  >
-                    About Us
-                  </UncontrolledTooltip>
                 </Link>
               </NavItem>
             </Nav>
