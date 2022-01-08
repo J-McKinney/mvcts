@@ -8,7 +8,7 @@ import Door from "../assets/img/MVCFrontDoor.jpeg";
 import JP from "../assets/img/JPeckich.jpg";
 import BSD from "../assets/img/backSeatDog.jpg";
 import CC from "../assets/img/catCase.jpg";
-import PP from "../assets/img/passports.jpg";
+import HD from "../assets/img/hikerDog.jpg";
 
 // reactstrap components
 import {
@@ -361,9 +361,9 @@ function Home() {
                           </Col>
                           <Col xl={4} lg={12} md={12} xs={12}>
                             <img
-                              className={Styles.pp}
-                              src={PP}
-                              alt="Cheers with your passports"
+                              className={Styles.hd}
+                              src={HD}
+                              alt="Dog hitchhiking"
                             />
                           </Col>
                         </Row>

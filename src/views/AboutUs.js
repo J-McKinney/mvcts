@@ -20,7 +20,8 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 import Styles from "./style.module.css";
-// import CatDog from "../assets/img/catDog.png";
+import MO from "../assets/img/MVCOriginal.jpg";
+import PP from "../assets/img/passports.jpg";
 
 function Dashboard() {
   return (
@@ -30,27 +31,25 @@ function Dashboard() {
           <Col xs={12} md={4}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
-                <h5 className="card-category">Global Sales</h5>
                 <CardTitle tag="h4">Shipped Products</CardTitle>
-                {/* <UncontrolledDropdown>
-                  <DropdownToggle
-                    className="btn-round btn-outline-default btn-icon"
-                    color="default"
-                  >
-                    <i className="now-ui-icons loader_gear" />
-                  </DropdownToggle>
-                  <DropdownMenu right>
-                    <DropdownItem>Action</DropdownItem>
-                    <DropdownItem>Another Action</DropdownItem>
-                    <DropdownItem>Something else here</DropdownItem>
-                    <DropdownItem className="text-danger">
-                      Remove data
-                    </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown> */}
               </CardHeader>
               <CardBody>
-                <div className="chart-area"></div>
+                <div
+                  style={{ textAlign: "center", height: "40vh" }}
+                  className="chart-area"
+                >
+                  <img
+                    className={Styles.mo}
+                    style={{
+                      width: "90%",
+                      height: "40vh",
+                      objectFit: "cover",
+                      borderRadius: "15px",
+                    }}
+                    src={MO}
+                    alt="girl with dog"
+                  />
+                </div>
               </CardBody>
               <CardFooter>
                 <div className="stats">
@@ -96,27 +95,25 @@ function Dashboard() {
           <Col xs={12} md={4}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
-                <h5 className="card-category">Email Statistics</h5>
                 <CardTitle tag="h4">24 Hours Performance</CardTitle>
-                {/* <UncontrolledDropdown>
-                  <DropdownToggle
-                    className="btn-round btn-outline-default btn-icon"
-                    color="default"
-                  >
-                    <i className="now-ui-icons loader_gear" />
-                  </DropdownToggle>
-                  <DropdownMenu right>
-                    <DropdownItem>Action</DropdownItem>
-                    <DropdownItem>Another Action</DropdownItem>
-                    <DropdownItem>Something else here</DropdownItem>
-                    <DropdownItem className="text-danger">
-                      Remove data
-                    </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown> */}
               </CardHeader>
               <CardBody>
-                <div className="chart-area"></div>
+                <div
+                  style={{ textAlign: "center", height: "40vh" }}
+                  className="chart-area"
+                >
+                  <img
+                    className={Styles.pp}
+                    style={{
+                      width: "90%",
+                      height: "40vh",
+                      objectFit: "cover",
+                      borderRadius: "15px",
+                    }}
+                    src={PP}
+                    alt="Passport cheers"
+                  />
+                </div>
               </CardBody>
               <CardFooter>
                 <div className="stats">
