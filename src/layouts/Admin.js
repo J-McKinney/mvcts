@@ -47,7 +47,7 @@ function Admin(props) {
               />
             );
           })}
-          <Redirect from="/admin" to="/admin/dashboard" />
+          <Redirect from="/mvcts" to="/mvcts/home" />
         </Switch>
         <Footer fluid />
       </div>

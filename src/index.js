@@ -9,10 +9,10 @@ import "assets/css/demo.css";
 import AdminLayout from "layouts/Admin.js";
 
 ReactDOM.render(
-  <BrowserRouter basename="/mvcts">
+  <BrowserRouter basename="/">
     <Switch>
-      <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
-      <Redirect to="/admin/home" />
+      <Route path="/mvcts" render={(props) => <AdminLayout {...props} />} />
+      <Redirect to="/mvcts/home" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

@@ -64,7 +64,7 @@ function DemoNavbar(props) {
       <Container fluid>
         <div className="navbar-wrapper">
           <div className="MVCLogo">
-            <Link to="/admin/home" className="nav-link">
+            <Link to="/mvcts/home" className="nav-link">
               <img
                 style={{ margin: "0", height: "60px", width: "60px" }}
                 src={TLI}
@@ -83,7 +83,7 @@ function DemoNavbar(props) {
           <Nav navbar>
             {/* Home */}
             <NavItem>
-              <Link to="/admin/home" className="nav-link">
+              <Link to="/mvcts/home" className="nav-link">
                 <i
                   style={{
                     color: "lightseagreen",
@@ -116,7 +116,7 @@ function DemoNavbar(props) {
             </NavItem>
             {/* Form */}
             <NavItem>
-              <Link to="/admin/travel-form" className="nav-link">
+              <Link to="/mvcts/travel-form" className="nav-link">
                 <i
                   style={{
                     color: "lightseagreen",
@@ -149,7 +149,7 @@ function DemoNavbar(props) {
             </NavItem>
             {/* Location */}
             <NavItem>
-              <Link to="/admin/maps" className="nav-link">
+              <Link to="/mvcts/maps" className="nav-link">
                 <i
                   style={{
                     color: "lightseagreen",
@@ -181,7 +181,7 @@ function DemoNavbar(props) {
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/admin/about-us" className="nav-link">
+              <Link to="/mvcts/about-us" className="nav-link">
                 <i
                   style={{
                     color: "lightseagreen",
