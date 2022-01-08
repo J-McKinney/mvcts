@@ -12,6 +12,7 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import Styles from "./style.module.css";
 
 function User() {
   return (
@@ -20,7 +21,7 @@ function User() {
         {/* User Information */}
         <Row>
           <Col className="ml-auto mr-auto" md="10">
-            <Card>
+            <Card id={Styles.bs}>
               <CardHeader>
                 <h5 className="title">Your Information</h5>
               </CardHeader>
@@ -114,7 +115,7 @@ function User() {
         {/* Pet Information */}
         <Row>
           <Col className="ml-auto mr-auto" md="10">
-            <Card>
+            <Card id={Styles.bs}>
               <CardHeader>
                 <h5 className="title">Pet Information</h5>
               </CardHeader>
@@ -199,7 +200,7 @@ function User() {
         {/* Trip Information */}
         <Row>
           <Col className="ml-auto mr-auto" md="10">
-            <Card>
+            <Card id={Styles.bs}>
               <CardHeader>
                 <h5 className="title">Trip Information</h5>
               </CardHeader>

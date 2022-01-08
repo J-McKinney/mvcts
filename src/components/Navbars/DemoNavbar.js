@@ -96,7 +96,7 @@ function DemoNavbar(props) {
                   >
                     Home
                   </h5>
-                  <p>
+                  {/* <p> */}
                     <span
                       style={{
                         color: "lightseagreen",
@@ -115,7 +115,7 @@ function DemoNavbar(props) {
                       />{" "}
                       Home
                     </span>
-                  </p>
+                  {/* </p> */}
                 </Link>
               </NavItem>
               {/* Form */}

@@ -19,6 +19,7 @@ import {
   Input,
   UncontrolledTooltip,
 } from "reactstrap";
+import Styles from "./style.module.css";
 // import CatDog from "../assets/img/catDog.png";
 
 function Dashboard() {
@@ -27,7 +28,7 @@ function Dashboard() {
       <div style={{ marginTop: "10vh" }} className="content">
         <Row>
           <Col xs={12} md={4}>
-            <Card className="card-chart">
+            <Card id={Styles.bs} className="card-chart">
               <CardHeader>
                 <h5 className="card-category">Global Sales</h5>
                 <CardTitle tag="h4">Shipped Products</CardTitle>
@@ -60,7 +61,7 @@ function Dashboard() {
             </Card>
           </Col>
           <Col xs={12} md={4}>
-            <Card className="card-chart">
+            <Card id={Styles.bs} className="card-chart">
               <CardHeader>
                 <h5 className="card-category">2021 Sales</h5>
                 <CardTitle tag="h4">All products</CardTitle>
@@ -93,7 +94,7 @@ function Dashboard() {
             </Card>
           </Col>
           <Col xs={12} md={4}>
-            <Card className="card-chart">
+            <Card id={Styles.bs} className="card-chart">
               <CardHeader>
                 <h5 className="card-category">Email Statistics</h5>
                 <CardTitle tag="h4">24 Hours Performance</CardTitle>
@@ -127,7 +128,7 @@ function Dashboard() {
         </Row>
         <Row>
           <Col xs={12} md={6}>
-            <Card className="card-tasks">
+            <Card id={Styles.bs} className="card-tasks">
               <CardHeader>
                 <h5 className="card-category">Backend Development</h5>
                 <CardTitle tag="h4">Tasks</CardTitle>
@@ -207,7 +208,7 @@ function Dashboard() {
             </Card>
           </Col>
           <Col xs={12} md={6}>
-            <Card>
+            <Card id={Styles.bs}>
               <CardHeader>
                 <h5 className="card-category">All Persons List</h5>
                 <CardTitle tag="h4">Employees Stats</CardTitle>

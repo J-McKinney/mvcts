@@ -1,5 +1,5 @@
 import React from "react";
-
+import Styles from "./style.module.css";
 // reactstrap components
 import { Row, Col, Card, CardHeader, CardBody } from "reactstrap";
 
@@ -55,7 +55,7 @@ function FullScreenMap() {
       <div style={{ marginTop: "10vh" }} className="content">
         <Row>
           <Col xs={12}>
-            <Card>
+            <Card id={Styles.bs}>
               <CardHeader>Google Maps</CardHeader>
               <CardBody>
                 <div
