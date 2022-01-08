@@ -19,7 +19,7 @@ import {
   Button,
 } from "reactstrap";
 
-function Notifications() {
+function Home() {
   return (
     <>
       <div className={Styles.wrapper}>
@@ -308,4 +308,4 @@ function Notifications() {
   );
 }
 
-export default Notifications;
+export default Home;

@@ -1,21 +1,21 @@
-import Dashboard from "views/Dashboard.js";
-import Notifications from "views/Notifications.js";
+import Home from "views/Home.js";
+import AboutUs from "views/AboutUs.js";
 import Maps from "views/Maps.js";
 import UserPage from "views/UserPage.js";
 
 var dashRoutes = [
   {
     path: "/home",
-    name: "Notifications",
+    name: "Home",
     icon: "ui-1_bell-53",
-    component: Notifications,
+    component: Home,
     layout: "/mvcts",
   },
   {
     path: "/about-us",
-    name: "Dashboard",
+    name: "about-us",
     icon: "design_app",
-    component: Dashboard,
+    component: AboutUs,
     layout: "/mvcts",
   },
   {
