@@ -51,7 +51,7 @@ function Admin(props) {
           <Redirect from="/mvcts" to="/mvcts/home" />
         </Switch>
         <h2 className="align-self-center" id={Styles.title}>
-          <span id={Styles.span}>MVC Travel Services</span>
+          <span id={Styles.span}>Travel Services</span>
         </h2>
         <Footer fluid />
       </div>

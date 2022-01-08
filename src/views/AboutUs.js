@@ -1,7 +1,4 @@
 import React from "react";
-// react plugin used to create charts
-import { Line, Bar } from "react-chartjs-2";
-
 // reactstrap components
 import {
   Card,
@@ -22,40 +19,19 @@ import {
   Input,
   UncontrolledTooltip,
 } from "reactstrap";
-
-// core components
-// import PanelHeader from "components/PanelHeader/PanelHeader.js";
-
 // import CatDog from "../assets/img/catDog.png";
-
-import {
-  dashboardPanelChart,
-  dashboardShippedProductsChart,
-  dashboardAllProductsChart,
-  dashboard24HoursPerformanceChart,
-} from "variables/charts.js";
 
 function Dashboard() {
   return (
     <>
-      {/* <PanelHeader
-        size="lg"
-        content={
-          <Line
-            data={dashboardPanelChart.data}
-            options={dashboardPanelChart.options}
-          />
-          // <img src={CatDog} alt="Cat and Dog" />
-        }
-      /> */}
-      <div style={{marginTop: "10vh"}} className="content">
+      <div style={{ marginTop: "10vh" }} className="content">
         <Row>
           <Col xs={12} md={4}>
             <Card className="card-chart">
               <CardHeader>
                 <h5 className="card-category">Global Sales</h5>
                 <CardTitle tag="h4">Shipped Products</CardTitle>
-                <UncontrolledDropdown>
+                {/* <UncontrolledDropdown>
                   <DropdownToggle
                     className="btn-round btn-outline-default btn-icon"
                     color="default"
@@ -70,20 +46,15 @@ function Dashboard() {
                       Remove data
                     </DropdownItem>
                   </DropdownMenu>
-                </UncontrolledDropdown>
+                </UncontrolledDropdown> */}
               </CardHeader>
               <CardBody>
-                <div className="chart-area">
-                  <Line
-                    data={dashboardShippedProductsChart.data}
-                    options={dashboardShippedProductsChart.options}
-                  />
-                </div>
+                <div className="chart-area"></div>
               </CardBody>
               <CardFooter>
                 <div className="stats">
-                  <i className="now-ui-icons arrows-1_refresh-69" /> Just
-                  Updated
+                  {/* <i className="now-ui-icons arrows-1_refresh-69" /> Just
+                  Updated */}
                 </div>
               </CardFooter>
             </Card>
@@ -93,7 +64,7 @@ function Dashboard() {
               <CardHeader>
                 <h5 className="card-category">2021 Sales</h5>
                 <CardTitle tag="h4">All products</CardTitle>
-                <UncontrolledDropdown>
+                {/* <UncontrolledDropdown>
                   <DropdownToggle
                     className="btn-round btn-outline-default btn-icon"
                     color="default"
@@ -108,20 +79,15 @@ function Dashboard() {
                       Remove data
                     </DropdownItem>
                   </DropdownMenu>
-                </UncontrolledDropdown>
+                </UncontrolledDropdown> */}
               </CardHeader>
               <CardBody>
-                <div className="chart-area">
-                  <Line
-                    data={dashboardAllProductsChart.data}
-                    options={dashboardAllProductsChart.options}
-                  />
-                </div>
+                <div className="chart-area"></div>
               </CardBody>
               <CardFooter>
                 <div className="stats">
-                  <i className="now-ui-icons arrows-1_refresh-69" /> Just
-                  Updated
+                  {/* <i className="now-ui-icons arrows-1_refresh-69" /> Just
+                  Updated */}
                 </div>
               </CardFooter>
             </Card>
@@ -131,18 +97,29 @@ function Dashboard() {
               <CardHeader>
                 <h5 className="card-category">Email Statistics</h5>
                 <CardTitle tag="h4">24 Hours Performance</CardTitle>
+                {/* <UncontrolledDropdown>
+                  <DropdownToggle
+                    className="btn-round btn-outline-default btn-icon"
+                    color="default"
+                  >
+                    <i className="now-ui-icons loader_gear" />
+                  </DropdownToggle>
+                  <DropdownMenu right>
+                    <DropdownItem>Action</DropdownItem>
+                    <DropdownItem>Another Action</DropdownItem>
+                    <DropdownItem>Something else here</DropdownItem>
+                    <DropdownItem className="text-danger">
+                      Remove data
+                    </DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown> */}
               </CardHeader>
               <CardBody>
-                <div className="chart-area">
-                  <Bar
-                    data={dashboard24HoursPerformanceChart.data}
-                    options={dashboard24HoursPerformanceChart.options}
-                  />
-                </div>
+                <div className="chart-area"></div>
               </CardBody>
               <CardFooter>
                 <div className="stats">
-                  <i className="now-ui-icons ui-2_time-alarm" /> Last 7 days
+                  {/* <i className="now-ui-icons ui-2_time-alarm" /> Last 7 days */}
                 </div>
               </CardFooter>
             </Card>
@@ -163,133 +140,57 @@ function Dashboard() {
                         <td>
                           <FormGroup check>
                             <Label check>
-                              <Input defaultChecked type="checkbox" />
+                              <Input
+                                defaultChecked
+                                type="checkbox"
+                                disabled={true}
+                              />
                               <span className="form-check-sign" />
                             </Label>
                           </FormGroup>
                         </td>
                         <td className="text-left">
                           Sign contract for "What are conference organizers
-                          afraid of?"
-                        </td>
-                        <td className="td-actions text-right">
-                          <Button
-                            className="btn-round btn-icon btn-icon-mini btn-neutral"
-                            color="info"
-                            id="tooltip731609871"
-                            type="button"
-                          >
-                            <i className="now-ui-icons ui-2_settings-90" />
-                          </Button>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="tooltip731609871"
-                          >
-                            Edit Task
-                          </UncontrolledTooltip>
-                          <Button
-                            className="btn-round btn-icon btn-icon-mini btn-neutral"
-                            color="danger"
-                            id="tooltip923217206"
-                            type="button"
-                          >
-                            <i className="now-ui-icons ui-1_simple-remove" />
-                          </Button>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="tooltip923217206"
-                          >
-                            Remove
-                          </UncontrolledTooltip>
+                          afraid of?" Sign contract for "What are conference
+                          organizers afraid of?"
                         </td>
                       </tr>
                       <tr>
                         <td>
                           <FormGroup check>
                             <Label check>
-                              <Input type="checkbox" />
+                              <Input
+                                defaultChecked
+                                type="checkbox"
+                                disabled={true}
+                              />
                               <span className="form-check-sign" />
                             </Label>
                           </FormGroup>
                         </td>
                         <td className="text-left">
-                          Lines From Great Russian Literature? Or E-mails From
-                          My Boss?
-                        </td>
-                        <td className="td-actions text-right">
-                          <Button
-                            className="btn-round btn-icon btn-icon-mini btn-neutral"
-                            color="info"
-                            id="tooltip907509347"
-                            type="button"
-                          >
-                            <i className="now-ui-icons ui-2_settings-90" />
-                          </Button>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="tooltip907509347"
-                          >
-                            Edit Task
-                          </UncontrolledTooltip>
-                          <Button
-                            className="btn-round btn-icon btn-icon-mini btn-neutral"
-                            color="danger"
-                            id="tooltip496353037"
-                            type="button"
-                          >
-                            <i className="now-ui-icons ui-1_simple-remove" />
-                          </Button>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="tooltip496353037"
-                          >
-                            Remove
-                          </UncontrolledTooltip>
+                          Sign contract for "What are conference organizers
+                          afraid of?" Sign contract for "What are conference
+                          organizers afraid of?"
                         </td>
                       </tr>
                       <tr>
                         <td>
                           <FormGroup check>
                             <Label check>
-                              <Input defaultChecked type="checkbox" />
+                              <Input
+                                defaultChecked
+                                type="checkbox"
+                                disabled={true}
+                              />
                               <span className="form-check-sign" />
                             </Label>
                           </FormGroup>
                         </td>
                         <td className="text-left">
-                          Flooded: One year later, assessing what was lost and
-                          what was found when a ravaging rain swept through
-                          metro Detroit
-                        </td>
-                        <td className="td-actions text-right">
-                          <Button
-                            className="btn-round btn-icon btn-icon-mini btn-neutral"
-                            color="info"
-                            id="tooltip326247652"
-                            type="button"
-                          >
-                            <i className="now-ui-icons ui-2_settings-90" />
-                          </Button>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="tooltip326247652"
-                          >
-                            Edit Task
-                          </UncontrolledTooltip>
-                          <Button
-                            className="btn-round btn-icon btn-icon-mini btn-neutral"
-                            color="danger"
-                            id="tooltip389516969"
-                            type="button"
-                          >
-                            <i className="now-ui-icons ui-1_simple-remove" />
-                          </Button>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="tooltip389516969"
-                          >
-                            Remove
-                          </UncontrolledTooltip>
+                          Sign contract for "What are conference organizers
+                          afraid of?" Sign contract for "What are conference
+                          organizers afraid of?"
                         </td>
                       </tr>
                     </tbody>
@@ -299,8 +200,8 @@ function Dashboard() {
               <CardFooter>
                 <hr />
                 <div className="stats">
-                  <i className="now-ui-icons loader_refresh spin" /> Updated 3
-                  minutes ago
+                  {/* <i className="now-ui-icons loader_refresh spin" /> Updated 3
+                  minutes ago */}
                 </div>
               </CardFooter>
             </Card>

@@ -7,7 +7,6 @@ import {
   Nav,
   NavItem,
   Container,
-  UncontrolledTooltip,
 } from "reactstrap";
 import Styles from "../../views/style.module.css";
 import TLI from "../../assets/img/transparentLogoIcon.png";
