@@ -28,7 +28,7 @@ function Dashboard() {
     <>
       <div style={{ marginTop: "10vh" }} className="content">
         <Row>
-          <Col xs={12} md={4}>
+          <Col xs={12} md={6}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
                 <CardTitle tag="h4">Shipped Products</CardTitle>
@@ -59,40 +59,22 @@ function Dashboard() {
               </CardFooter>
             </Card>
           </Col>
-          <Col xs={12} md={4}>
+          {/* <Col xs={12} md={4}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
                 <h5 className="card-category">2021 Sales</h5>
                 <CardTitle tag="h4">All products</CardTitle>
-                {/* <UncontrolledDropdown>
-                  <DropdownToggle
-                    className="btn-round btn-outline-default btn-icon"
-                    color="default"
-                  >
-                    <i className="now-ui-icons loader_gear" />
-                  </DropdownToggle>
-                  <DropdownMenu right>
-                    <DropdownItem>Action</DropdownItem>
-                    <DropdownItem>Another Action</DropdownItem>
-                    <DropdownItem>Something else here</DropdownItem>
-                    <DropdownItem className="text-danger">
-                      Remove data
-                    </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown> */}
               </CardHeader>
               <CardBody>
                 <div className="chart-area"></div>
               </CardBody>
               <CardFooter>
                 <div className="stats">
-                  {/* <i className="now-ui-icons arrows-1_refresh-69" /> Just
-                  Updated */}
                 </div>
               </CardFooter>
             </Card>
-          </Col>
-          <Col xs={12} md={4}>
+          </Col> */}
+          <Col xs={12} md={6}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
                 <CardTitle tag="h4">24 Hours Performance</CardTitle>
@@ -123,6 +105,94 @@ function Dashboard() {
             </Card>
           </Col>
         </Row>
+        {/* First Row */}
+
+        <br />
+
+        {/* Second Row */}
+        <Row>
+          <Col xs={12} md={6}>
+            <Card id={Styles.bs} className="card-chart">
+              <CardHeader>
+                <CardTitle tag="h4">Shipped Products</CardTitle>
+              </CardHeader>
+              <CardBody>
+                <div
+                  style={{ textAlign: "center", height: "40vh" }}
+                  className="chart-area"
+                >
+                  <img
+                    className={Styles.mo}
+                    style={{
+                      width: "90%",
+                      height: "40vh",
+                      objectFit: "cover",
+                      borderRadius: "15px",
+                    }}
+                    src={MO}
+                    alt="girl with dog"
+                  />
+                </div>
+              </CardBody>
+              <CardFooter>
+                <div className="stats">
+                  {/* <i className="now-ui-icons arrows-1_refresh-69" /> Just
+                  Updated */}
+                </div>
+              </CardFooter>
+            </Card>
+          </Col>
+          {/* <Col xs={12} md={4}>
+            <Card id={Styles.bs} className="card-chart">
+              <CardHeader>
+                <h5 className="card-category">2021 Sales</h5>
+                <CardTitle tag="h4">All products</CardTitle>
+              </CardHeader>
+              <CardBody>
+                <div className="chart-area"></div>
+              </CardBody>
+              <CardFooter>
+                <div className="stats">
+                </div>
+              </CardFooter>
+            </Card>
+          </Col> */}
+          <Col xs={12} md={6}>
+            <Card id={Styles.bs} className="card-chart">
+              <CardHeader>
+                <CardTitle tag="h4">24 Hours Performance</CardTitle>
+              </CardHeader>
+              <CardBody>
+                <div
+                  style={{ textAlign: "center", height: "40vh" }}
+                  className="chart-area"
+                >
+                  <img
+                    className={Styles.pp}
+                    style={{
+                      width: "90%",
+                      height: "40vh",
+                      objectFit: "cover",
+                      borderRadius: "15px",
+                    }}
+                    src={PP}
+                    alt="Passport cheers"
+                  />
+                </div>
+              </CardBody>
+              <CardFooter>
+                <div className="stats">
+                  {/* <i className="now-ui-icons ui-2_time-alarm" /> Last 7 days */}
+                </div>
+              </CardFooter>
+            </Card>
+          </Col>
+        </Row>
+        {/* Second Row */}
+
+        <br />
+        
+        {/* Third Row */}
         <Row>
           <Col xs={12} md={6}>
             <Card id={Styles.bs} className="card-tasks">
