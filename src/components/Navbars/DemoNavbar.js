@@ -7,7 +7,9 @@ import {
   Nav,
   NavItem,
   Container,
+  UncontrolledTooltip,
 } from "reactstrap";
+import Styles from "../../views/style.module.css";
 import TLI from "../../assets/img/transparentLogoIcon.png";
 
 function DemoNavbar(props) {
@@ -88,6 +90,7 @@ function DemoNavbar(props) {
                     fontSize: "2em",
                     fontWeight: "600",
                   }}
+                  id="tooltip907509347"
                   className="now-ui-icons shopping_shop"
                 />
                 <p>
@@ -102,6 +105,13 @@ function DemoNavbar(props) {
                     Home
                   </span>
                 </p>
+                <UncontrolledTooltip
+                  placement="bottom"
+                  delay={1}
+                  target="tooltip907509347"
+                >
+                  Home
+                </UncontrolledTooltip>
               </Link>
             </NavItem>
             {/* Form */}
@@ -113,6 +123,7 @@ function DemoNavbar(props) {
                     fontSize: "2em",
                     fontWeight: "600",
                   }}
+                  id="tooltip907509346"
                   className="now-ui-icons files_paper"
                 />
                 <p>
@@ -127,6 +138,13 @@ function DemoNavbar(props) {
                     Travel Form
                   </span>
                 </p>
+                <UncontrolledTooltip
+                  placement="bottom"
+                  delay={1}
+                  target="tooltip907509346"
+                >
+                  Travel Form
+                </UncontrolledTooltip>
               </Link>
             </NavItem>
             {/* Location */}
@@ -138,6 +156,7 @@ function DemoNavbar(props) {
                     fontSize: "2em",
                     fontWeight: "600",
                   }}
+                  id="tooltip907509345"
                   className="now-ui-icons location_pin"
                 />
                 <p>
@@ -152,6 +171,13 @@ function DemoNavbar(props) {
                     Our Location
                   </span>
                 </p>
+                <UncontrolledTooltip
+                  placement="bottom"
+                  delay={1}
+                  target="tooltip907509345"
+                >
+                  Our Location
+                </UncontrolledTooltip>
               </Link>
             </NavItem>
             <NavItem>
@@ -162,6 +188,7 @@ function DemoNavbar(props) {
                     fontSize: "2em",
                     fontWeight: "600",
                   }}
+                  id="tooltip907509344"
                   className="now-ui-icons users_single-02"
                 />
                 <p>
@@ -176,6 +203,13 @@ function DemoNavbar(props) {
                     About Us
                   </span>
                 </p>
+                <UncontrolledTooltip
+                  placement="bottom"
+                  delay={1}
+                  target="tooltip907509344"
+                >
+                  About Us
+                </UncontrolledTooltip>
               </Link>
             </NavItem>
           </Nav>

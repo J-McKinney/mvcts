@@ -1,15 +1,41 @@
-.title {
-  color: lightseagreen;
+.wrapper {
+  overflow-x: hidden;
+}
+
+#title {
+  color: black;
   text-align: center;
   z-index: 1000;
   font-weight: 900;
   -webkit-text-fill-color: black;
-  -webkit-text-stroke-color: lightseagreen;
-  -webkit-text-stroke-width: 2px;
-  padding-top: 5vh;
+  -webkit-text-stroke-color: dimgray;
+  -webkit-text-stroke-width: 1px;
+  margin-top: 5vh;
 }
 
-.span {
+#span {
   font-weight: 500;
   text-transform: uppercase;
+}
+
+.DCW,
+.DIC,
+.jp,
+.door,
+.crew {
+  border-radius: 15px;
+  box-shadow: -1px -1px 2px 2px hsl(0, 0%, 79%), 5px 5px 5px 3px hsl(0, 0%, 39%);
+  margin-bottom: 2vh;
+}
+
+@media only screen and (max-width: 1504px) {
+  #h3 {
+    font-size: x-large;
+  }
+}
+
+@media only screen and (max-width: 1203px) {
+  #h3 {
+    font-size: large;
+  }
 }
