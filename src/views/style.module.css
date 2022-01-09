@@ -61,17 +61,19 @@
   box-shadow: -1px -1px 2px 2px hsl(0, 0%, 79%), 5px 5px 5px 3px hsl(0, 0%, 39%);
 }
 
-.cb,
-.cb:hover,
-.cb:active,
-.cb:focus {
-  box-shadow: -1px -1px 2px 2px hsl(0, 0%, 79%), 5px 5px 5px 3px hsl(0, 0%, 39%);
+.cb {
+  box-shadow: -1px -1px 2px 2px hsl(0, 0%, 79%), 5px 5px 5px 3px hsl(0, 0%, 39%) !important;
 }
-
+.cb:hover {
+  box-shadow: -1px -1px 2px 2px hsl(0, 0%, 79%), 5px 5px 5px 3px hsl(0, 0%, 39%) !important;
+}
+.cb:focus {
+  box-shadow: -1px -1px 2px 2px hsl(0, 0%, 79%), 5px 5px 5px 3px hsl(0, 0%, 39%) !important;
+}
 .cb:active {
-  box-shadow: -1px -1px 2px 2px hsl(0, 0%, 79%), 5px 5px 5px 3px hsl(0, 0%, 39%);
-  transform: translateY(3px);
-  -webkit-transform: translateY(3px);
+  box-shadow: -1px -1px 2px 2px hsl(0, 0%, 79%), 5px 5px 5px 3px hsl(0, 0%, 39%) !important;
+  transform: translate(2px, 1px) !important;
+  -webkit-transform: translate(2px, 1px) !important;
 }
 
 /* className="justify-content-center align-items-center align-self-center align-content-center" */
