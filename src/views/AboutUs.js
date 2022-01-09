@@ -16,6 +16,8 @@ import {
 import Styles from "./style.module.css";
 import MO from "../assets/img/MVCOriginal.jpg";
 import PP from "../assets/img/passports.jpg";
+import CND from "../assets/img/cnd.jpg";
+import HU from "../assets/img/husky.jpg";
 
 function Dashboard() {
   return (
@@ -25,7 +27,7 @@ function Dashboard() {
           <Col xs={12} md={6}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
-                <CardTitle tag="h4">Shipped Products</CardTitle>
+                <CardTitle tag="h4">Updates</CardTitle>
               </CardHeader>
               <CardBody>
                 <div
@@ -44,30 +46,27 @@ function Dashboard() {
                     alt="girl with dog"
                   />
                 </div>
+                <br />
               </CardBody>
             </Card>
           </Col>
           <Col xs={12} md={6}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
-                <CardTitle tag="h4">24 Hours Performance</CardTitle>
+                <CardTitle tag="h4">New Updates</CardTitle>
               </CardHeader>
               <CardBody>
                 <div
                   style={{ textAlign: "center", height: "40vh" }}
                   className="chart-area"
                 >
-                  <img
-                    className={Styles.pp}
-                    style={{
-                      width: "90%",
-                      height: "40vh",
-                      objectFit: "cover",
-                      borderRadius: "15px",
-                    }}
-                    src={PP}
-                    alt="Passport cheers"
-                  />
+                  <h3 style={{ margin: "30px" }} id={Styles.h3}>
+                    Effective, the CDC temporarily suspended dog imports from
+                    countries as a high-risk for rabies. Effective, the CDC
+                    updated its requirements to allow certain dogs returning to
+                    the US to be imported from countries as a high-risk for
+                    rabies, if the pet meets specific requirements.
+                  </h3>
                 </div>
               </CardBody>
             </Card>
@@ -89,14 +88,12 @@ function Dashboard() {
                   style={{ textAlign: "center", height: "40vh" }}
                   className="chart-area"
                 >
-                  <br />
                   <h3 style={{ margin: "30px" }} id={Styles.h3}>
-                    Pet travel isn't easy, and on top of everything else you
-                    have to do obtaining all the right documents with all the
-                    right endorsements can seem like quite the endeavor.
-                    Specifically, we commonly receive questions regarding the
-                    APHIS 7001, a Veterinary Health Certificate that comes into
-                    play for many international pet moves.
+                    Pet travel isn't easy, and everything else you have to do,
+                    obtaining all the right documents with all the endorsements
+                    can seem like quite the endeavor. We commonly receive
+                    questions regarding the APHIS 7001, a Veterinary Health
+                    Certificate that comes into play for pet moves.
                   </h3>
                 </div>
               </CardBody>
@@ -124,6 +121,7 @@ function Dashboard() {
                     alt="Passport cheers"
                   />
                 </div>
+                <br />
               </CardBody>
             </Card>
           </Col>
@@ -332,106 +330,49 @@ function Dashboard() {
         {/* Fourth Row */}
         <Row>
           <Col xs={12} md={6}>
-            <Card id={Styles.bs}>
+            <Card id={Styles.bs} className="card-chart">
               <CardHeader>
-                <h5 className="card-category">All Persons List</h5>
-                <CardTitle tag="h4">Employees Stats</CardTitle>
+                <CardTitle tag="h4">Updates</CardTitle>
               </CardHeader>
               <CardBody>
-                <Table responsive>
-                  <thead className="text-primary">
-                    <tr>
-                      <th>Name</th>
-                      <th>Country</th>
-                      <th>City</th>
-                      <th className="text-right">Salary</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Dakota Rice</td>
-                      <td>Niger</td>
-                      <td>Oud-Turnhout</td>
-                      <td className="text-right">$36,738</td>
-                    </tr>
-                    <tr>
-                      <td>Minerva Hooper</td>
-                      <td>Curaçao</td>
-                      <td>Sinaai-Waas</td>
-                      <td className="text-right">$23,789</td>
-                    </tr>
-                    <tr>
-                      <td>Sage Rodriguez</td>
-                      <td>Netherlands</td>
-                      <td>Baileux</td>
-                      <td className="text-right">$56,142</td>
-                    </tr>
-                    <tr>
-                      <td>Doris Greene</td>
-                      <td>Malawi</td>
-                      <td>Feldkirchen in Kärnten</td>
-                      <td className="text-right">$63,542</td>
-                    </tr>
-                    <tr>
-                      <td>Mason Porter</td>
-                      <td>Chile</td>
-                      <td>Gloucester</td>
-                      <td className="text-right">$78,615</td>
-                    </tr>
-                  </tbody>
-                </Table>
+                <div
+                  style={{ textAlign: "center", height: "40vh" }}
+                  className="chart-area"
+                >
+                  <img
+                    className={Styles.mo}
+                    style={{
+                      width: "90%",
+                      height: "40vh",
+                      objectFit: "cover",
+                      borderRadius: "15px",
+                    }}
+                    src={CND}
+                    alt="girl with dog"
+                  />
+                </div>
+                <br />
               </CardBody>
             </Card>
           </Col>
           <Col xs={12} md={6}>
-            <Card id={Styles.bs}>
+            <Card id={Styles.bs} className="card-chart">
               <CardHeader>
-                <h5 className="card-category">All Persons List</h5>
-                <CardTitle tag="h4">Employees Stats</CardTitle>
+                <CardTitle tag="h4">New Updates</CardTitle>
               </CardHeader>
               <CardBody>
-                <Table responsive>
-                  <thead className="text-primary">
-                    <tr>
-                      <th>Name</th>
-                      <th>Country</th>
-                      <th>City</th>
-                      <th className="text-right">Salary</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Dakota Rice</td>
-                      <td>Niger</td>
-                      <td>Oud-Turnhout</td>
-                      <td className="text-right">$36,738</td>
-                    </tr>
-                    <tr>
-                      <td>Minerva Hooper</td>
-                      <td>Curaçao</td>
-                      <td>Sinaai-Waas</td>
-                      <td className="text-right">$23,789</td>
-                    </tr>
-                    <tr>
-                      <td>Sage Rodriguez</td>
-                      <td>Netherlands</td>
-                      <td>Baileux</td>
-                      <td className="text-right">$56,142</td>
-                    </tr>
-                    <tr>
-                      <td>Doris Greene</td>
-                      <td>Malawi</td>
-                      <td>Feldkirchen in Kärnten</td>
-                      <td className="text-right">$63,542</td>
-                    </tr>
-                    <tr>
-                      <td>Mason Porter</td>
-                      <td>Chile</td>
-                      <td>Gloucester</td>
-                      <td className="text-right">$78,615</td>
-                    </tr>
-                  </tbody>
-                </Table>
+                <div
+                  style={{ textAlign: "center", height: "40vh" }}
+                  className="chart-area"
+                >
+                  <h3 style={{ margin: "30px" }} id={Styles.h3}>
+                    Your destination may have specific requirements that must be
+                    met before your pet can enter. Since the requirements are
+                    determined by each country and can change frequently, every
+                    plan pet travel will need to verified. Note that airlines
+                    may have separate requirements.
+                  </h3>
+                </div>
               </CardBody>
             </Card>
           </Col>
@@ -440,6 +381,60 @@ function Dashboard() {
 
         <br />
 
+        {/* Fifth Row */}
+        <Row>
+          <Col xs={12} md={6}>
+            <Card id={Styles.bs} className="card-chart">
+              <CardHeader>
+                <CardTitle tag="h4">New Updates</CardTitle>
+              </CardHeader>
+              <CardBody>
+                <div
+                  style={{ textAlign: "center", height: "40vh" }}
+                  className="chart-area"
+                >
+                  <h3 style={{ margin: "30px" }} id={Styles.h3}>
+                    The process for taking a pet bird or other exotic animal out
+                    of the United States may involve multiple agencies including
+                    USDA APHIS Veterinary Services (VS), and U.S. Fish and
+                    Wildlife Service (FWS). It is critical that you meet ALL
+                    requirements for each of these agencies prior to export.
+                  </h3>
+                </div>
+              </CardBody>
+            </Card>
+          </Col>
+          <Col xs={12} md={6}>
+            <Card id={Styles.bs} className="card-chart">
+              <CardHeader>
+                <CardTitle tag="h4">Updates</CardTitle>
+              </CardHeader>
+              <CardBody>
+                <div
+                  style={{ textAlign: "center", height: "40vh" }}
+                  className="chart-area"
+                >
+                  <img
+                    className={Styles.mo}
+                    style={{
+                      width: "90%",
+                      height: "40vh",
+                      objectFit: "cover",
+                      borderRadius: "15px",
+                    }}
+                    src={HU}
+                    alt="girl with dog"
+                  />
+                </div>
+                <br />
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+        {/* Fifth Row */}
+
+        <br />
+        {/* END */}
       </div>
     </>
   );
