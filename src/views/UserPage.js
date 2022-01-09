@@ -1,5 +1,6 @@
 /*eslint-disable*/
 import React from "react";
+// import { useEffect, useState } from "react";
 import {
   Card,
   CardHeader,
@@ -20,7 +21,6 @@ function User() {
   return (
     <>
       <div style={{ marginTop: "10vh" }} className="content">
-        {/* User Information */}
         <Row>
           <Col className="ml-auto mr-auto" md="10">
             <Card id={Styles.bs}>
@@ -110,11 +110,7 @@ function User() {
             </Card>
           </Col>
         </Row>
-        {/* User Information */}
-
         <br />
-
-        {/* Pet Information */}
         <Row>
           <Col className="ml-auto mr-auto" md="10">
             <Card id={Styles.bs}>
@@ -195,11 +191,7 @@ function User() {
             </Card>
           </Col>
         </Row>
-        {/* Pet Information */}
-
         <br />
-
-        {/* Trip Information */}
         <Row>
           <Col className="ml-auto mr-auto" md="10">
             <Card id={Styles.bs}>
@@ -296,15 +288,10 @@ function User() {
             </Card>
           </Col>
         </Row>
-        {/* Trip Information */}
-
         <br />
-
-        {/* Submit Button */}
         <Row>
           <Col md={1} />
           <Col md={10}>
-            {/* <Button>Hello</Button> */}
             <div className="d-grid gap-2">
               <Button
                 className={Styles.cb}
@@ -331,12 +318,9 @@ function User() {
             </div>
           </Col>
         </Row>
-        {/* Submit Button */}
-
         <br />
-
-        {/* Break */}
       </div>
+      {/* Break */}
     </>
   );
 }

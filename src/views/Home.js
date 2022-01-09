@@ -28,17 +28,17 @@ function Home() {
     <>
       <div className={Styles.wrapper}>
         <div
-          style={{
-            height: "89.99vh",
-            marginTop: "0.01vh",
-            backgroundImage: `url(${CatDog})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            position: "relative",
-          }}
-          className="content"
-        ></div>
+            style={{
+              height: "89.99vh",
+              marginTop: "0.01vh",
+              backgroundImage: `url(${CatDog})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              position: "relative",
+            }}
+            className="content"
+          />
         <div style={{ marginTop: "10vh" }} className="content">
           <Row
             style={{
