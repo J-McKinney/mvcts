@@ -1,23 +1,17 @@
+/*eslint-disable*/
 import React from "react";
 // reactstrap components
 import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   CardTitle,
   Row,
   Col,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   Table,
-  Button,
   Label,
   FormGroup,
   Input,
-  UncontrolledTooltip,
 } from "reactstrap";
 import Styles from "./style.module.css";
 import MO from "../assets/img/MVCOriginal.jpg";
@@ -51,29 +45,8 @@ function Dashboard() {
                   />
                 </div>
               </CardBody>
-              <CardFooter>
-                <div className="stats">
-                  {/* <i className="now-ui-icons arrows-1_refresh-69" /> Just
-                  Updated */}
-                </div>
-              </CardFooter>
             </Card>
           </Col>
-          {/* <Col xs={12} md={4}>
-            <Card id={Styles.bs} className="card-chart">
-              <CardHeader>
-                <h5 className="card-category">2021 Sales</h5>
-                <CardTitle tag="h4">All products</CardTitle>
-              </CardHeader>
-              <CardBody>
-                <div className="chart-area"></div>
-              </CardBody>
-              <CardFooter>
-                <div className="stats">
-                </div>
-              </CardFooter>
-            </Card>
-          </Col> */}
           <Col xs={12} md={6}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
@@ -97,11 +70,6 @@ function Dashboard() {
                   />
                 </div>
               </CardBody>
-              <CardFooter>
-                <div className="stats">
-                  {/* <i className="now-ui-icons ui-2_time-alarm" /> Last 7 days */}
-                </div>
-              </CardFooter>
             </Card>
           </Col>
         </Row>
@@ -114,53 +82,30 @@ function Dashboard() {
           <Col xs={12} md={6}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
-                <CardTitle tag="h4">Shipped Products</CardTitle>
+                <CardTitle tag="h4">Pet Travel</CardTitle>
               </CardHeader>
               <CardBody>
                 <div
                   style={{ textAlign: "center", height: "40vh" }}
                   className="chart-area"
                 >
-                  <img
-                    className={Styles.mo}
-                    style={{
-                      width: "90%",
-                      height: "40vh",
-                      objectFit: "cover",
-                      borderRadius: "15px",
-                    }}
-                    src={MO}
-                    alt="girl with dog"
-                  />
+                  <br />
+                  <h3 style={{ margin: "30px" }} id={Styles.h3}>
+                    Pet travel isn't easy, and on top of everything else you
+                    have to do obtaining all the right documents with all the
+                    right endorsements can seem like quite the endeavor.
+                    Specifically, we commonly receive questions regarding the
+                    APHIS 7001, a Veterinary Health Certificate that comes into
+                    play for many international pet moves.
+                  </h3>
                 </div>
               </CardBody>
-              <CardFooter>
-                <div className="stats">
-                  {/* <i className="now-ui-icons arrows-1_refresh-69" /> Just
-                  Updated */}
-                </div>
-              </CardFooter>
             </Card>
           </Col>
-          {/* <Col xs={12} md={4}>
-            <Card id={Styles.bs} className="card-chart">
-              <CardHeader>
-                <h5 className="card-category">2021 Sales</h5>
-                <CardTitle tag="h4">All products</CardTitle>
-              </CardHeader>
-              <CardBody>
-                <div className="chart-area"></div>
-              </CardBody>
-              <CardFooter>
-                <div className="stats">
-                </div>
-              </CardFooter>
-            </Card>
-          </Col> */}
           <Col xs={12} md={6}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
-                <CardTitle tag="h4">24 Hours Performance</CardTitle>
+                <CardTitle tag="h4">International Travel</CardTitle>
               </CardHeader>
               <CardBody>
                 <div
@@ -180,11 +125,6 @@ function Dashboard() {
                   />
                 </div>
               </CardBody>
-              <CardFooter>
-                <div className="stats">
-                  {/* <i className="now-ui-icons ui-2_time-alarm" /> Last 7 days */}
-                </div>
-              </CardFooter>
             </Card>
           </Col>
         </Row>
@@ -344,7 +284,37 @@ function Dashboard() {
                         </td>
                         <td className="text-left">
                           <p>
-                            <strong>USDA Endorsement: </strong>
+                            <strong>
+                              USDA Endorsement With Referenced Forms:{" "}
+                            </strong>
+                            Microchip Implantation Record. Rabies Certificate.
+                            Rabies Titer Test Results. Vet Letter. EU Vet Health
+                            Certificate. Must be sent to your local USDA for
+                            their stamp of approval. Please contact Marietta
+                            Veterinary Clinic on the best way of handling this.
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <FormGroup check>
+                            <Label check>
+                              <Input
+                                defaultChecked
+                                type="checkbox"
+                                disabled={true}
+                              />
+                              <span className="form-check-sign" />
+                            </Label>
+                          </FormGroup>
+                        </td>
+                        <td className="text-left">
+                          <p>
+                            <strong>24-48 Hours Prior to Departure: </strong>
+                            we will need to issue both an International Health
+                            Certificate and Tick / Tapeworm Treatment we have
+                            administered. Along with all files and additional
+                            certificates to validate pet records and results.
                           </p>
                         </td>
                       </tr>
@@ -352,13 +322,6 @@ function Dashboard() {
                   </Table>
                 </div>
               </CardBody>
-              <CardFooter>
-                <hr />
-                <div className="stats">
-                  {/* <i className="now-ui-icons loader_refresh spin" /> Updated 3
-                  minutes ago */}
-                </div>
-              </CardFooter>
             </Card>
           </Col>
         </Row>
@@ -474,6 +437,9 @@ function Dashboard() {
           </Col>
         </Row>
         {/* Fourth Row */}
+
+        <br />
+
       </div>
     </>
   );

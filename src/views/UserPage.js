@@ -1,6 +1,6 @@
+/*eslint-disable*/
 import React from "react";
 import {
-  Button,
   Card,
   CardHeader,
   CardBody,
@@ -11,7 +11,9 @@ import {
   InputGroupText,
   Row,
   Col,
+  Container,
 } from "reactstrap";
+import Button from "react-bootstrap/Button";
 import Styles from "./style.module.css";
 
 function User() {
@@ -295,6 +297,45 @@ function User() {
           </Col>
         </Row>
         {/* Trip Information */}
+
+        <br />
+
+        {/* Submit Button */}
+        <Row>
+          <Col md={1} />
+          <Col md={10}>
+            {/* <Button>Hello</Button> */}
+            <div className="d-grid gap-2">
+              <Button
+                className={Styles.cb}
+                style={{
+                  width: "100%",
+                  color: "black",
+                  fontWeight: "900",
+                  background: "lightseagreen",
+                  borderRadius: "15px",
+                }}
+                variant="primary"
+                size="lg"
+              >
+                <h5
+                  style={{
+                    color: "black",
+                    fontWeight: "900",
+                    marginTop: "10px",
+                  }}
+                >
+                  Submit Form
+                </h5>
+              </Button>
+            </div>
+          </Col>
+        </Row>
+        {/* Submit Button */}
+
+        <br />
+
+        {/* Break */}
       </div>
     </>
   );

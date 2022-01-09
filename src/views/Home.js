@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import React from "react";
 import Styles from "./style.module.css";
 import CatDog from "../assets/img/catDog.png";
