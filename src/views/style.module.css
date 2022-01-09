@@ -61,8 +61,17 @@
   box-shadow: -1px -1px 2px 2px hsl(0, 0%, 79%), 5px 5px 5px 3px hsl(0, 0%, 39%);
 }
 
-.cb {
+.cb,
+.cb:hover,
+.cb:active,
+.cb:focus {
   box-shadow: -1px -1px 2px 2px hsl(0, 0%, 79%), 5px 5px 5px 3px hsl(0, 0%, 39%);
+}
+
+.cb:active {
+  box-shadow: -1px -1px 2px 2px hsl(0, 0%, 79%), 5px 5px 5px 3px hsl(0, 0%, 39%);
+  transform: translateY(3px);
+  -webkit-transform: translateY(3px);
 }
 
 /* className="justify-content-center align-items-center align-self-center align-content-center" */
