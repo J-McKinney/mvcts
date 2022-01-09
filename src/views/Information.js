@@ -22,23 +22,110 @@ import HU from "../assets/img/husky.jpg";
 function Dashboard() {
   return (
     <>
-      <div style={{ marginTop: "10vh" }} className="content">
-        <Row>
-          <Col xs={12} md={6}>
+      <div style={{ marginTop: "15vh" }} className="content">
+        {/*  */}
+        <Row style={{ marginBottom: "15vh" }}>
+          <Col xs={1} md={1} lg={1} />
+          <Col xs={10} md={10} lg={10}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
-                <CardTitle tag="h4">Updates</CardTitle>
+                <CardTitle
+                  style={{ color: "dimgray", textAlign: "center" }}
+                  tag="h1"
+                >
+                  Marietta Veterinary Clinic
+                </CardTitle>
+                <CardTitle
+                  style={{ color: "lightseagreen", textAlign: "center" }}
+                  tag="h3"
+                >
+                  DR. JULIAN PECKICH
+                </CardTitle>
               </CardHeader>
               <CardBody>
                 <div
-                  style={{ textAlign: "center", height: "40vh" }}
+                  style={{
+                    paddingRight: "30px",
+                    paddingLeft: "30px",
+                    textAlign: "center",
+                  }}
+                >
+                  <h4>
+                    At Marietta Vet Clinic, we offer comprehensive, high-quality
+                    care at our state-of-the-art facility. We strive to create
+                    the most welcoming, pleasant experience for you and your
+                    furry friend. Dr. Peckich is affiliated with the American
+                    Veterinary Medical Association and has been providing
+                    specialized care for nearly ten years.
+                  </h4>
+                </div>
+                <div
+                  style={{
+                    paddingRight: "30px",
+                    paddingLeft: "30px",
+                    textAlign: "center",
+                  }}
+                >
+                  <h4>
+                    Dr. Julian Peckich DVM is an award winning Marietta
+                    veterinarian. The Marietta Daily Journal has chosen Dr.
+                    Peckich as the "Best Veterinarian" 2021 in Cobb County, and
+                    the veterinary clinic won the "Best Veterinary Group" in
+                    Cobb County. Dr. Peckich is grateful and thanks the
+                    community for choosing him as the best veterinarian.
+                  </h4>
+                </div>
+                <div
+                  style={{
+                    paddingRight: "30px",
+                    paddingLeft: "30px",
+                    textAlign: "center",
+                  }}
+                >
+                  <h4>
+                    Dr. Peckich was raised in Cobb County, graduating from the
+                    local McEachern High School. He went on to earn a Bachelor
+                    of Science Degree in Chemistry at Creighton University in
+                    Omaha, Nebraska. Dr. Peckich attended St. Matthews
+                    University School of Veterinary Medicine, and North Carolina
+                    State University College of Veterinary Medicine for clinical
+                    rotations.
+                  </h4>
+                </div>
+                <div
+                  style={{
+                    paddingRight: "30px",
+                    paddingLeft: "30px",
+                    textAlign: "center",
+                  }}
+                >
+                  <h4>
+                    Dr. Peckich and team are happy to serve the Marietta,
+                    Kennesaw, Powder Springs, Acworth, Dallas, Hiram, and
+                    Vinings, GA cities and of course West Cobb.
+                  </h4>
+                </div>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+        {/*  */}
+        <Row style={{ marginBottom: "15vh" }}>
+          <Col xs={12} md={6}>
+            <Card id={Styles.bs} className="card-chart">
+              <CardHeader>
+                {/* <CardTitle tag="h4">Updates</CardTitle> */}
+              </CardHeader>
+              <CardBody>
+                <div
+                  style={{ textAlign: "center", height: "50vh" }}
                   className="chart-area"
                 >
                   <img
                     className={Styles.mo}
                     style={{
                       width: "90%",
-                      height: "40vh",
+                      height: "46vh",
                       objectFit: "cover",
                       borderRadius: "15px",
                     }}
@@ -46,18 +133,14 @@ function Dashboard() {
                     alt="girl with dog"
                   />
                 </div>
-                <br />
               </CardBody>
             </Card>
           </Col>
           <Col xs={12} md={6}>
             <Card id={Styles.bs} className="card-chart">
-              <CardHeader>
-                <CardTitle tag="h4">New Updates</CardTitle>
-              </CardHeader>
               <CardBody>
                 <div
-                  style={{ textAlign: "center", height: "40vh" }}
+                  style={{ textAlign: "center", height: "48vh" }}
                   className="chart-area"
                 >
                   <h3 style={{ margin: "30px" }} id={Styles.h3}>
@@ -72,20 +155,15 @@ function Dashboard() {
             </Card>
           </Col>
         </Row>
-        {/* First Row */}
-
-        <br />
-
-        {/* Second Row */}
-        <Row>
+        <Row style={{ marginBottom: "15vh" }}>
           <Col xs={12} md={6}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
-                <CardTitle tag="h4">Pet Travel</CardTitle>
+                {/* <CardTitle tag="h4">Pet Travel</CardTitle> */}
               </CardHeader>
               <CardBody>
                 <div
-                  style={{ textAlign: "center", height: "40vh" }}
+                  style={{ textAlign: "center", height: "48vh" }}
                   className="chart-area"
                 >
                   <h3 style={{ margin: "30px" }} id={Styles.h3}>
@@ -102,18 +180,18 @@ function Dashboard() {
           <Col xs={12} md={6}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
-                <CardTitle tag="h4">International Travel</CardTitle>
+                {/* <CardTitle tag="h4">International Travel</CardTitle> */}
               </CardHeader>
               <CardBody>
                 <div
-                  style={{ textAlign: "center", height: "40vh" }}
+                  style={{ textAlign: "center", height: "52vh" }}
                   className="chart-area"
                 >
                   <img
                     className={Styles.pp}
                     style={{
                       width: "90%",
-                      height: "40vh",
+                      height: "50vh",
                       objectFit: "cover",
                       borderRadius: "15px",
                     }}
@@ -121,17 +199,11 @@ function Dashboard() {
                     alt="Passport cheers"
                   />
                 </div>
-                <br />
               </CardBody>
             </Card>
           </Col>
         </Row>
-        {/* Second Row */}
-
-        <br />
-
-        {/* Third Row */}
-        <Row>
+        <Row style={{ marginBottom: "15vh" }}>
           <Col xs={1} md={1} />
           <Col xs={10} md={10}>
             <Card id={Styles.bs} className="card-tasks">
@@ -323,27 +395,22 @@ function Dashboard() {
             </Card>
           </Col>
         </Row>
-        {/* Third Row */}
-
-        <br />
-
-        {/* Fourth Row */}
-        <Row>
+        <Row style={{ marginBottom: "15vh" }}>
           <Col xs={12} md={6}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
-                <CardTitle tag="h4">Updates</CardTitle>
+                {/* <CardTitle tag="h4">Requirements</CardTitle> */}
               </CardHeader>
               <CardBody>
                 <div
-                  style={{ textAlign: "center", height: "40vh" }}
+                  style={{ textAlign: "center", height: "52vh" }}
                   className="chart-area"
                 >
                   <img
-                    className={Styles.mo}
+                    className={Styles.cnd}
                     style={{
                       width: "90%",
-                      height: "40vh",
+                      height: "48vh",
                       objectFit: "cover",
                       borderRadius: "15px",
                     }}
@@ -351,18 +418,17 @@ function Dashboard() {
                     alt="girl with dog"
                   />
                 </div>
-                <br />
               </CardBody>
             </Card>
           </Col>
           <Col xs={12} md={6}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
-                <CardTitle tag="h4">New Updates</CardTitle>
+                {/* <CardTitle tag="h4">Requirements</CardTitle> */}
               </CardHeader>
               <CardBody>
                 <div
-                  style={{ textAlign: "center", height: "40vh" }}
+                  style={{ textAlign: "center", height: "48vh" }}
                   className="chart-area"
                 >
                   <h3 style={{ margin: "30px" }} id={Styles.h3}>
@@ -377,20 +443,15 @@ function Dashboard() {
             </Card>
           </Col>
         </Row>
-        {/* Fourth Row */}
-
-        <br />
-
-        {/* Fifth Row */}
-        <Row>
+        <Row style={{ marginBottom: "15vh" }}>
           <Col xs={12} md={6}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
-                <CardTitle tag="h4">New Updates</CardTitle>
+                {/* <CardTitle tag="h4">New Updates</CardTitle> */}
               </CardHeader>
               <CardBody>
                 <div
-                  style={{ textAlign: "center", height: "40vh" }}
+                  style={{ textAlign: "center", height: "48vh" }}
                   className="chart-area"
                 >
                   <h3 style={{ margin: "30px" }} id={Styles.h3}>
@@ -407,18 +468,18 @@ function Dashboard() {
           <Col xs={12} md={6}>
             <Card id={Styles.bs} className="card-chart">
               <CardHeader>
-                <CardTitle tag="h4">Updates</CardTitle>
+                {/* <CardTitle tag="h4">Updates</CardTitle> */}
               </CardHeader>
               <CardBody>
                 <div
-                  style={{ textAlign: "center", height: "40vh" }}
+                  style={{ textAlign: "center", height: "52vh" }}
                   className="chart-area"
                 >
                   <img
-                    className={Styles.mo}
+                    className={Styles.hu}
                     style={{
                       width: "90%",
-                      height: "40vh",
+                      height: "48vh",
                       objectFit: "cover",
                       borderRadius: "15px",
                     }}
@@ -426,15 +487,10 @@ function Dashboard() {
                     alt="girl with dog"
                   />
                 </div>
-                <br />
               </CardBody>
             </Card>
           </Col>
         </Row>
-        {/* Fifth Row */}
-
-        <br />
-        {/* END */}
       </div>
     </>
   );

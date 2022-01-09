@@ -29,7 +29,9 @@
 .cc,
 .hd,
 .mo,
-.pp {
+.pp,
+.hu,
+.cnd {
   border-radius: 15px;
   box-shadow: -1px -1px 2px 2px hsl(0, 0%, 79%), 5px 5px 5px 3px hsl(0, 0%, 39%);
 }

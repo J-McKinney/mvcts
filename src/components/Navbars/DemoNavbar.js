@@ -9,7 +9,6 @@ import {
   Container,
 } from "reactstrap";
 import Styles from "../../views/style.module.css";
-import TLI from "../../assets/img/transparentLogoIcon.png";
 
 function DemoNavbar(props) {
   const location = useLocation();
@@ -48,11 +47,11 @@ function DemoNavbar(props) {
     // add or remove classes depending if we are on full-screen-maps page or not
     <>
       <Navbar
-        color={
-          props.location.pathname.indexOf("full-screen-maps") !== -1
-            ? "white"
-            : color
-        }
+        // color={
+        //   props.location.pathname.indexOf("full-screen-maps") !== -1
+        //     ? "white"
+        //     : color
+        // }
         expand="lg"
         className={
           props.location.pathname.indexOf("full-screen-maps") !== -1
@@ -189,7 +188,7 @@ function DemoNavbar(props) {
                 </Link>
               </NavItem>
               <NavItem>
-                <Link to="/mvcts/about-us" className="nav-link">
+                <Link to="/mvcts/information" className="nav-link">
                   <h5
                     style={{
                       color: "lightseagreen",
@@ -198,7 +197,7 @@ function DemoNavbar(props) {
                     }}
                     id={Styles.h5}
                   >
-                    About Us
+                    Information
                   </h5>
                   <p>
                     <span
@@ -217,7 +216,7 @@ function DemoNavbar(props) {
                         }}
                         className="now-ui-icons users_single-02"
                       />{" "}
-                      About Us
+                      Information
                     </span>
                   </p>
                 </Link>

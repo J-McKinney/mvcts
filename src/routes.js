@@ -1,8 +1,7 @@
 import Home from "views/Home.js";
-import AboutUs from "views/AboutUs.js";
+import Information from "views/Information.js";
 import Maps from "views/Maps.js";
 import UserPage from "views/UserPage.js";
-import Zest from "views/Zest.js"
 
 var dashRoutes = [
   {
@@ -13,10 +12,10 @@ var dashRoutes = [
     layout: "/mvcts",
   },
   {
-    path: "/about-us",
-    name: "about-us",
+    path: "/information",
+    name: "information",
     icon: "design_app",
-    component: AboutUs,
+    component: Information,
     layout: "/mvcts",
   },
   {
@@ -31,13 +30,6 @@ var dashRoutes = [
     name: "User Profile",
     icon: "users_single-02",
     component: UserPage,
-    layout: "/mvcts",
-  },
-  {
-    path: "/zest",
-    name: "Zest",
-    icon: "users_single-02",
-    component: Zest,
     layout: "/mvcts",
   },
 ];
