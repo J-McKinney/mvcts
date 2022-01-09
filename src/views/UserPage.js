@@ -1,6 +1,6 @@
 /*eslint-disable*/
 import React from "react";
-// import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Card,
   CardHeader,
@@ -293,28 +293,30 @@ function User() {
           <Col md={1} />
           <Col md={10}>
             <div className="d-grid gap-2">
-              <Button
-                className={Styles.cb}
-                style={{
-                  width: "100%",
-                  color: "black",
-                  fontWeight: "900",
-                  background: "lightseagreen",
-                  borderRadius: "15px",
-                }}
-                variant="primary"
-                size="lg"
-              >
-                <h5
+              <Link to="/">
+                <Button
+                  className={Styles.cb}
                   style={{
+                    width: "100%",
                     color: "black",
                     fontWeight: "900",
-                    marginTop: "10px",
+                    background: "lightseagreen",
+                    borderRadius: "15px",
                   }}
+                  variant="primary"
+                  size="lg"
                 >
-                  Submit Form
-                </h5>
-              </Button>
+                  <h5
+                    style={{
+                      color: "black",
+                      fontWeight: "900",
+                      marginTop: "10px",
+                    }}
+                  >
+                    Submit Form
+                  </h5>
+                </Button>
+              </Link>
             </div>
           </Col>
         </Row>
