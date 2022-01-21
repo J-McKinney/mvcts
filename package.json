@@ -24,6 +24,7 @@
     "reactstrap": "8.9.0"
   },
   "scripts": {
+    "gogo": "git status && git add . && git commit -m 'auto' && git push && npm run build && npm run deploy ",
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

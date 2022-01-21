@@ -1,6 +1,5 @@
 /*eslint-disable*/
-// import React, { useState } from "react";
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import {
   Card,
@@ -18,412 +17,504 @@ import {
 import Button from "react-bootstrap/Button";
 import Styles from "./style.module.css";
 
-// const initialState = { setFirstName: "" };
+class User extends Component {
+  state = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    address: "",
+    city: "",
+    country: "",
+    zip: "",
+    petName: "",
+    petSpecies: "",
+    petBreed: "",
+    petWeight: "",
+    petAge: "",
+    dCountry: "",
+    dCity: "",
+    dState: "",
+    aCountry: "",
+    aCity: "",
+    aState: "",
+    moveDate: "",
+    reason: "",
+    addInfo: "",
+  };
 
-function User() {
-  // const [firstName, setFirstName] = useState("");
-  // const [lastName, setLastName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [phoneNumber, setPhoneNumber] = useState("");
-  // const [address, setAddress] = useState("");
-  // const [city, setCity] = useState("");
-  // const [country, setCountry] = useState("");
-  // const [zip, setZip] = useState("");
-  // const [petName, setPetName] = useState("");
-  // const [petSpecies, setPetSpecies] = useState("");
-  // const [petBreed, setPetBreed] = useState("");
-  // const [petWeight, setPetWeight] = useState("");
-  // const [petAge, setPetAge] = useState("");
-  // const [dCountry, setDCountry] = useState("");
-  // const [dCity, setDCity] = useState("");
-  // const [dState, setDState] = useState("");
-  // const [aCountry, setACountry] = useState("");
-  // const [aCity, setACity] = useState("");
-  // const [aState, setAState] = useState("");
-  // const [moveDate, setMoveDate] = useState("");
-  // const [reason, setReason] = useState("");
-  // const [addInfo, setAddInfo] = useState("");
+  handleInputChange = (event) => {
+    let value = event.target.value;
+    const name = event.target.name;
+    this.setState({
+      [name]: value,
+    });
+  };
 
-  // const submitValue = (e) => {
-  //   e.preventDefault();
-  //   const frmdetails = {
-  //     "First Name": firstName,
-  //     "Last Name": lastName,
-  //     "Phone Number": phoneNumber,
-  //     "Email Address": email,
-  //     "Home Address": address,
-  //     "Home City": city,
-  //     "Home Country": country,
-  //     "Home Zip": zip,
-  //     "Pet Name": petName,
-  //     "Pet Species": petSpecies,
-  //     "Pet Breed": petBreed,
-  //     "Pet Weight": petWeight,
-  //     "Pet Age": petAge,
-  //     "Country Departure": dCountry,
-  //     "City Departure": dCity,
-  //     "State Departure": dState,
-  //     "Country Arrival": aCountry,
-  //     "City Arrival": aCity,
-  //     "State Arrival": aState,
-  //     "Reason To Move": reason,
-  //     "Additional Information": addInfo,
-  //   };
-  //   // console.log(frmdetails);
-  //   alert("Thank You For Submitting");
-  // };
+  handleFormSubmit = (event) => {
+    event.preventDefault();
+    if (!this.state.firstName) {
+      alert("Please fill in your first name!");
+    }
+    if (!this.state.lastName) {
+      alert("Please fill in your last name!");
+    }
+    if (!this.state.email) {
+      alert("Please fill in your email address!");
+    }
+    if (!this.state.phoneNumber) {
+      alert("Please fill in your phone number!");
+    }
+    if (!this.state.address) {
+      alert("Please fill in your home address!");
+    }
+    if (!this.state.city) {
+      alert("Please fill in your home city!");
+    }
+    if (!this.state.country) {
+      alert("Please fill in your country!");
+    }
+    if (!this.state.zip) {
+      alert("Please fill in your zip code!");
+    }
+    if (!this.state.petName) {
+      alert("Please fill in your pets name!");
+    }
+    if (!this.state.petSpecies) {
+      alert("Please fill in your pets species!");
+    }
+    if (!this.state.petBreed) {
+      alert("Please fill in your pets breed!");
+    }
+    if (!this.state.petWeight) {
+      alert("Please fill in your pets weight!");
+    }
+    if (!this.state.petAge) {
+      alert("Please fill in your pets age!");
+    }
+    if (!this.state.dCountry) {
+      alert("Please fill in your departure country!");
+    }
+    if (!this.state.dCity) {
+      alert("Please fill in your departure city!");
+    }
+    if (!this.state.dState) {
+      alert("Please fill in your departure state!");
+    }
+    if (!this.state.aCountry) {
+      alert("Please fill in your arrival country!");
+    }
+    if (!this.state.aCity) {
+      alert("Please fill in your arrival city!");
+    }
+    if (!this.state.aState) {
+      alert("Please fill in your arrival state!");
+    }
+    if (!this.state.moveDate) {
+      alert("Please fill in your move in date!");
+    }
+    if (!this.state.reason) {
+      alert("Please fill out your reason for moving!");
+    } else {
+      alert(
+        `Thank you ${this.state.firstName} ${this.state.lastName} for submitting your information.`
+      );
+    }
 
-  return (
-    <>
-      <div style={{ marginTop: "10vh" }} className="content">
-        <Row>
-          <Col className="ml-auto mr-auto" md="10">
-            <Card id={Styles.bs}>
-              <CardHeader>
-                <h5 className="title">Your Information</h5>
-              </CardHeader>
-              <CardBody>
-                <Form>
-                  <Row>
-                    <Col className="pr-1" md="1" />
-                    <Col className="pr-1" md="5">
-                      <FormGroup>
-                        <label>First Name</label>
-                        <Input
-                          // onChange={(event) => setFirstName(event.target.value)}
-                          placeholder="First Name"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col className="pr-1" md="5">
-                      <FormGroup>
-                        <label>Last Name</label>
-                        <Input
-                          // onChange={(event) => setLastName(event.target.value)}
-                          placeholder="Last Name"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="pr-1" md="1" />
-                    <Col className="pr-1" md="5">
-                      <FormGroup>
-                        <label htmlFor="exampleInputEmail1">
-                          Email Address
-                        </label>
-                        <InputGroup>
+    this.setState({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      address: "",
+      city: "",
+      country: "",
+      zip: "",
+      petName: "",
+      petSpecies: "",
+      petBreed: "",
+      petWeight: "",
+      petAge: "",
+      dCountry: "",
+      dCity: "",
+      dState: "",
+      aCountry: "",
+      aCity: "",
+      aState: "",
+      moveDate: "",
+      reason: "",
+      addInfo: "",
+    });
+  };
+
+  render() {
+    return (
+      <>
+        <div style={{ marginTop: "10vh" }} className="content">
+          <Row>
+            <Col className="ml-auto mr-auto" md="10">
+              <Card id={Styles.bs}>
+                <CardHeader>
+                  <h5 className="title">Your Information</h5>
+                </CardHeader>
+                <CardBody>
+                  <Form>
+                    <Row>
+                      <Col className="pr-1" md="1" />
+                      <Col className="pr-1" md="5">
+                        <FormGroup>
+                          <label>First Name</label>
                           <Input
-                            // onChange={(event) => setEmail(event.target.value)}
-                            placeholder="Email Address"
-                            type="email"
+                            onChange={this.handleInputChange}
+                            name="firstName"
+                            placeholder="First Name"
+                            type="text"
                           />
-                          <InputGroupText
-                            style={{
-                              borderBottomRightRadius: "50px",
-                              borderTopRightRadius: "50px",
-                            }}
-                          >
-                            @gmail.com
-                          </InputGroupText>
-                        </InputGroup>
-                      </FormGroup>
-                    </Col>
-                    <Col className="pr-1" md="5">
-                      <FormGroup>
-                        <label>Phone Number</label>
-                        <Input
-                          // onChange={(event) =>
-                          //   setPhoneNumber(event.target.value)
-                          // }
-                          placeholder="Phone Number"
-                          type="tel"
-                          maxLength="15"
-                        />
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="pr-1" md="1" />
-                    <Col className="pr-1" md="10">
-                      <FormGroup>
-                        <label>Address</label>
-                        <Input
-                          // onChange={(event) => setAddress(event.target.value)}
-                          placeholder="Home Address"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="pr-1" md="1" />
-                    <Col className="pr-1" md="4">
-                      <FormGroup>
-                        <label>City</label>
-                        <Input
-                          // onChange={(event) => setCity(event.target.value)}
-                          placeholder="City"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col className="pr-1" md="4">
-                      <FormGroup>
-                        <label>Country</label>
-                        <Input
-                          // onChange={(event) => setCountry(event.target.value)}
-                          placeholder="Country"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col className="pr-1" md="2">
-                      <FormGroup>
-                        <label>Postal Code</label>
-                        <Input
-                          // onChange={(event) => setZip(event.target.value)}
-                          placeholder="ZIP Code"
-                          type="number"
-                        />
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                </Form>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-        <br />
-        <Row>
-          <Col className="ml-auto mr-auto" md="10">
-            <Card id={Styles.bs}>
-              <CardHeader>
-                <h5 className="title">Pet Information</h5>
-              </CardHeader>
-              <CardBody>
-                <Form>
-                  <Row>
-                    <Col className="pr-1" md="1" />
-                    <Col className="pr-1" md="10">
-                      <FormGroup>
-                        <label>Pet Name</label>
-                        <Input
-                          // onChange={(event) => setPetName(event.target.value)}
-                          placeholder="Pet Name"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="pr-1" md="1" />
-                    <Col className="pr-1" md="5">
-                      <FormGroup>
-                        <label>Species</label>
-                        <Input
-                          // onChange={(event) =>
-                          //   setPetSpecies(event.target.value)
-                          // }
-                          placeholder="Species"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col className="pr-1" md="5">
-                      <FormGroup>
-                        <label>Breed</label>
-                        <Input
-                          // onChange={(event) => setPetBreed(event.target.value)}
-                          placeholder="Breed"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="pr-1" md="1" />
-                    <Col className="pr-1" md="5">
-                      <FormGroup>
-                        <label>Estimated weight in pounds</label>
-                        <InputGroup>
+                        </FormGroup>
+                      </Col>
+                      <Col className="pr-1" md="5">
+                        <FormGroup>
+                          <label>Last Name</label>
                           <Input
-                            // onChange={(event) =>
-                            //   setPetWeight(event.target.value)
-                            // }
-                            placeholder="Weight"
+                            onChange={this.handleInputChange}
+                            name="lastName"
+                            placeholder="Last Name"
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col className="pr-1" md="1" />
+                      <Col className="pr-1" md="5">
+                        <FormGroup>
+                          <label htmlFor="exampleInputEmail1">
+                            Email Address
+                          </label>
+                          <InputGroup>
+                            <Input
+                              onChange={this.handleInputChange}
+                              name="email"
+                              placeholder="Email Address"
+                              type="email"
+                            />
+                            <InputGroupText
+                              style={{
+                                borderBottomRightRadius: "50px",
+                                borderTopRightRadius: "50px",
+                              }}
+                            >
+                              @gmail.com
+                            </InputGroupText>
+                          </InputGroup>
+                        </FormGroup>
+                      </Col>
+                      <Col className="pr-1" md="5">
+                        <FormGroup>
+                          <label>Phone Number</label>
+                          <Input
+                            onChange={this.handleInputChange}
+                            name="phoneNumber"
+                            placeholder="Phone Number"
                             type="tel"
-                            maxLength="4"
+                            maxLength="15"
                           />
-                          <InputGroupText
-                            style={{
-                              borderBottomRightRadius: "50px",
-                              borderTopRightRadius: "50px",
-                            }}
-                          >
-                            lbs.
-                          </InputGroupText>
-                        </InputGroup>
-                      </FormGroup>
-                    </Col>
-                    <Col className="pr-1" md="5">
-                      <FormGroup>
-                        <label>Estimated age in years</label>
-                        <InputGroup>
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col className="pr-1" md="1" />
+                      <Col className="pr-1" md="10">
+                        <FormGroup>
+                          <label>Address</label>
                           <Input
-                            // onChange={(event) => setPetAge(event.target.value)}
-                            placeholder="Years old"
-                            type="tel"
-                            maxLength="3"
+                            onChange={this.handleInputChange}
+                            name="address"
+                            placeholder="Home Address"
+                            type="text"
                           />
-                          <InputGroupText
-                            style={{
-                              borderBottomRightRadius: "50px",
-                              borderTopRightRadius: "50px",
-                            }}
-                          >
-                            Years
-                          </InputGroupText>
-                        </InputGroup>
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                </Form>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-        <br />
-        <Row>
-          <Col className="ml-auto mr-auto" md="10">
-            <Card id={Styles.bs}>
-              <CardHeader>
-                <h5 className="title">Trip Information</h5>
-              </CardHeader>
-              <CardBody>
-                <Form>
-                  <Row>
-                    <Col className="pr-1" md="1" />
-                    <Col className="pr-1" md="4">
-                      <FormGroup>
-                        <label>Departure Country</label>
-                        <Input
-                          // onChange={(event) => setDCountry(event.target.value)}
-                          placeholder="Departure Country"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col className="pr-1" md="3">
-                      <FormGroup>
-                        <label>Departure City</label>
-                        <Input
-                          // onChange={(event) => setDCity(event.target.value)}
-                          placeholder="Departure City"
-                          type="Departure City"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col className="pr-1" md="3">
-                      <FormGroup>
-                        <label>Departure State</label>
-                        <Input
-                          // onChange={(event) => setDState(event.target.value)}
-                          placeholder="Departure State"
-                          type="Departure State"
-                        />
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="pr-1" md="1" />
-                    <Col className="pr-1" md="4">
-                      <FormGroup>
-                        <label>Arrival Country</label>
-                        <Input
-                          // onChange={(event) => setACountry(event.target.value)}
-                          placeholder="Arrival Country"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col className="pr-1" md="3">
-                      <FormGroup>
-                        <label>Arrival City</label>
-                        <Input
-                          // onChange={(event) => setACity(event.target.value)}
-                          placeholder="Arrival City"
-                          type="Arrival City"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col className="pr-1" md="3">
-                      <FormGroup>
-                        <label>Arrival State</label>
-                        <Input
-                          // onChange={(event) => setAState(event.target.value)}
-                          placeholder="Arrival State"
-                          type="Arrival State"
-                        />
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="pr-1" md="1" />
-                    <Col className="pr-1" md="5">
-                      <FormGroup>
-                        <label>Move Date</label>
-                        <Input
-                          // onChange={(event) => setMoveDate(event.target.value)}
-                          placeholder="MM/DD/YYYY"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col className="px-1" md="5">
-                      <FormGroup>
-                        <label>Relocation Reason</label>
-                        <Input
-                          // onChange={(event) => setReason(event.target.value)}
-                          placeholder="Relocation Reason"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <CardHeader>
-                      <h5 className="title">Additional Information</h5>
-                    </CardHeader>
-                    <Col className="pr-1" md="12">
-                      <FormGroup>
-                        <label>About Me</label>
-                        <Input
-                          // onChange={(event) => setAddInfo(event.target.value)}
-                          cols="80"
-                          placeholder="Here can be your description"
-                          rows="4"
-                          type="textarea"
-                          maxLength={1500}
-                        />
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                </Form>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-        <br />
-        <Row>
-          <Col md={1} />
-          <Col md={10}>
-            <div className="d-grid gap-2">
-              <Link to="/">
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col className="pr-1" md="1" />
+                      <Col className="pr-1" md="4">
+                        <FormGroup>
+                          <label>City</label>
+                          <Input
+                            onChange={this.handleInputChange}
+                            name="city"
+                            placeholder="City"
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col className="pr-1" md="4">
+                        <FormGroup>
+                          <label>Country</label>
+                          <Input
+                            onChange={this.handleInputChange}
+                            name="country"
+                            placeholder="Country"
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col className="pr-1" md="2">
+                        <FormGroup>
+                          <label>Postal Code</label>
+                          <Input
+                            onChange={this.handleInputChange}
+                            name="zip"
+                            placeholder="ZIP Code"
+                            type="number"
+                          />
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                  </Form>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          <br />
+          <Row>
+            <Col className="ml-auto mr-auto" md="10">
+              <Card id={Styles.bs}>
+                <CardHeader>
+                  <h5 className="title">Pet Information</h5>
+                </CardHeader>
+                <CardBody>
+                  <Form>
+                    <Row>
+                      <Col className="pr-1" md="1" />
+                      <Col className="pr-1" md="10">
+                        <FormGroup>
+                          <label>Pet Name</label>
+                          <Input
+                            onChange={this.handleInputChange}
+                            name="petName"
+                            placeholder="Pet Name"
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col className="pr-1" md="1" />
+                      <Col className="pr-1" md="5">
+                        <FormGroup>
+                          <label>Species</label>
+                          <Input
+                            onChange={this.handleInputChange}
+                            name="petSpecies"
+                            placeholder="Species"
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col className="pr-1" md="5">
+                        <FormGroup>
+                          <label>Breed</label>
+                          <Input
+                            onChange={this.handleInputChange}
+                            name="petBreed"
+                            placeholder="Breed"
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col className="pr-1" md="1" />
+                      <Col className="pr-1" md="5">
+                        <FormGroup>
+                          <label>Estimated weight in pounds</label>
+                          <InputGroup>
+                            <Input
+                              onChange={this.handleInputChange}
+                              name="petWeight"
+                              placeholder="Weight"
+                              type="tel"
+                              maxLength="4"
+                            />
+                            <InputGroupText
+                              style={{
+                                borderBottomRightRadius: "50px",
+                                borderTopRightRadius: "50px",
+                              }}
+                            >
+                              lbs.
+                            </InputGroupText>
+                          </InputGroup>
+                        </FormGroup>
+                      </Col>
+                      <Col className="pr-1" md="5">
+                        <FormGroup>
+                          <label>Estimated age in years</label>
+                          <InputGroup>
+                            <Input
+                              onChange={this.handleInputChange}
+                              name="petAge"
+                              placeholder="Years old"
+                              type="tel"
+                              maxLength="3"
+                            />
+                            <InputGroupText
+                              style={{
+                                borderBottomRightRadius: "50px",
+                                borderTopRightRadius: "50px",
+                              }}
+                            >
+                              Years
+                            </InputGroupText>
+                          </InputGroup>
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                  </Form>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          <br />
+          <Row>
+            <Col className="ml-auto mr-auto" md="10">
+              <Card id={Styles.bs}>
+                <CardHeader>
+                  <h5 className="title">Trip Information</h5>
+                </CardHeader>
+                <CardBody>
+                  <Form>
+                    <Row>
+                      <Col className="pr-1" md="1" />
+                      <Col className="pr-1" md="4">
+                        <FormGroup>
+                          <label>Departure Country</label>
+                          <Input
+                            onChange={this.handleInputChange}
+                            name="dCountry"
+                            placeholder="Departure Country"
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col className="pr-1" md="3">
+                        <FormGroup>
+                          <label>Departure City</label>
+                          <Input
+                            onChange={this.handleInputChange}
+                            name="dCity"
+                            placeholder="Departure City"
+                            type="Departure City"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col className="pr-1" md="3">
+                        <FormGroup>
+                          <label>Departure State</label>
+                          <Input
+                            onChange={this.handleInputChange}
+                            name="dState"
+                            placeholder="Departure State"
+                            type="Departure State"
+                          />
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col className="pr-1" md="1" />
+                      <Col className="pr-1" md="4">
+                        <FormGroup>
+                          <label>Arrival Country</label>
+                          <Input
+                            onChange={this.handleInputChange}
+                            name="aCountry"
+                            placeholder="Arrival Country"
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col className="pr-1" md="3">
+                        <FormGroup>
+                          <label>Arrival City</label>
+                          <Input
+                            onChange={this.handleInputChange}
+                            name="aCity"
+                            placeholder="Arrival City"
+                            type="Arrival City"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col className="pr-1" md="3">
+                        <FormGroup>
+                          <label>Arrival State</label>
+                          <Input
+                            onChange={this.handleInputChange}
+                            name="aState"
+                            placeholder="Arrival State"
+                            type="Arrival State"
+                          />
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col className="pr-1" md="1" />
+                      <Col className="pr-1" md="5">
+                        <FormGroup>
+                          <label>Move Date</label>
+                          <Input
+                            onChange={this.handleInputChange}
+                            name="moveDate"
+                            placeholder="MM/DD/YYYY"
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col className="px-1" md="5">
+                        <FormGroup>
+                          <label>Relocation Reason</label>
+                          <Input
+                            onChange={this.handleInputChange}
+                            name="reason"
+                            placeholder="Relocation Reason"
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <CardHeader>
+                        <h5 className="title">Additional Information</h5>
+                      </CardHeader>
+                      <Col className="pr-1" md="12">
+                        <FormGroup>
+                          <label>About Me</label>
+                          <Input
+                            onChange={this.handleInputChange}
+                            name="addInfo"
+                            cols="80"
+                            placeholder="Here can be your description"
+                            rows="4"
+                            type="textarea"
+                            maxLength={1500}
+                          />
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                  </Form>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          <br />
+          <Row>
+            <Col md={1} />
+            <Col md={10}>
+              <div className="d-grid gap-2">
+                {/* <Link to="/"> */}
                 <Button
-                  // onClick={submitValue}
+                  onClick={this.handleFormSubmit}
                   className={Styles.cb}
                   style={{
                     width: "100%",
@@ -445,14 +536,15 @@ function User() {
                     Submit Form
                   </h5>
                 </Button>
-              </Link>y
-            </div>
-          </Col>
-        </Row>
-        <br />
-      </div>
-    </>
-  );
+                {/* </Link> */}
+              </div>
+            </Col>
+          </Row>
+          <br />
+        </div>
+      </>
+    );
+  }
 }
 
 export default User;
