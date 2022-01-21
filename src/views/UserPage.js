@@ -1,4 +1,5 @@
 /*eslint-disable*/
+// import React, { useState } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
 import {
@@ -17,7 +18,61 @@ import {
 import Button from "react-bootstrap/Button";
 import Styles from "./style.module.css";
 
+// const initialState = { setFirstName: "" };
+
 function User() {
+  // const [firstName, setFirstName] = useState("");
+  // const [lastName, setLastName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [phoneNumber, setPhoneNumber] = useState("");
+  // const [address, setAddress] = useState("");
+  // const [city, setCity] = useState("");
+  // const [country, setCountry] = useState("");
+  // const [zip, setZip] = useState("");
+  // const [petName, setPetName] = useState("");
+  // const [petSpecies, setPetSpecies] = useState("");
+  // const [petBreed, setPetBreed] = useState("");
+  // const [petWeight, setPetWeight] = useState("");
+  // const [petAge, setPetAge] = useState("");
+  // const [dCountry, setDCountry] = useState("");
+  // const [dCity, setDCity] = useState("");
+  // const [dState, setDState] = useState("");
+  // const [aCountry, setACountry] = useState("");
+  // const [aCity, setACity] = useState("");
+  // const [aState, setAState] = useState("");
+  // const [moveDate, setMoveDate] = useState("");
+  // const [reason, setReason] = useState("");
+  // const [addInfo, setAddInfo] = useState("");
+
+  // const submitValue = (e) => {
+  //   e.preventDefault();
+  //   const frmdetails = {
+  //     "First Name": firstName,
+  //     "Last Name": lastName,
+  //     "Phone Number": phoneNumber,
+  //     "Email Address": email,
+  //     "Home Address": address,
+  //     "Home City": city,
+  //     "Home Country": country,
+  //     "Home Zip": zip,
+  //     "Pet Name": petName,
+  //     "Pet Species": petSpecies,
+  //     "Pet Breed": petBreed,
+  //     "Pet Weight": petWeight,
+  //     "Pet Age": petAge,
+  //     "Country Departure": dCountry,
+  //     "City Departure": dCity,
+  //     "State Departure": dState,
+  //     "Country Arrival": aCountry,
+  //     "City Arrival": aCity,
+  //     "State Arrival": aState,
+  //     "Reason To Move": reason,
+  //     "Additional Information": addInfo,
+  //   };
+  //   // console.log(frmdetails);
+  //   alert("Thank You For Submitting");
+  // };
+
   return (
     <>
       <div style={{ marginTop: "10vh" }} className="content">
@@ -34,13 +89,21 @@ function User() {
                     <Col className="pr-1" md="5">
                       <FormGroup>
                         <label>First Name</label>
-                        <Input placeholder="First Name" type="text" />
+                        <Input
+                          // onChange={(event) => setFirstName(event.target.value)}
+                          placeholder="First Name"
+                          type="text"
+                        />
                       </FormGroup>
                     </Col>
                     <Col className="pr-1" md="5">
                       <FormGroup>
                         <label>Last Name</label>
-                        <Input placeholder="Last Name" type="text" />
+                        <Input
+                          // onChange={(event) => setLastName(event.target.value)}
+                          placeholder="Last Name"
+                          type="text"
+                        />
                       </FormGroup>
                     </Col>
                   </Row>
@@ -52,7 +115,11 @@ function User() {
                           Email Address
                         </label>
                         <InputGroup>
-                          <Input placeholder="Email Address" type="email" />
+                          <Input
+                            // onChange={(event) => setEmail(event.target.value)}
+                            placeholder="Email Address"
+                            type="email"
+                          />
                           <InputGroupText
                             style={{
                               borderBottomRightRadius: "50px",
@@ -68,6 +135,9 @@ function User() {
                       <FormGroup>
                         <label>Phone Number</label>
                         <Input
+                          // onChange={(event) =>
+                          //   setPhoneNumber(event.target.value)
+                          // }
                           placeholder="Phone Number"
                           type="tel"
                           maxLength="15"
@@ -80,7 +150,11 @@ function User() {
                     <Col className="pr-1" md="10">
                       <FormGroup>
                         <label>Address</label>
-                        <Input placeholder="Home Address" type="text" />
+                        <Input
+                          // onChange={(event) => setAddress(event.target.value)}
+                          placeholder="Home Address"
+                          type="text"
+                        />
                       </FormGroup>
                     </Col>
                   </Row>
@@ -89,19 +163,31 @@ function User() {
                     <Col className="pr-1" md="4">
                       <FormGroup>
                         <label>City</label>
-                        <Input placeholder="City" type="text" />
+                        <Input
+                          // onChange={(event) => setCity(event.target.value)}
+                          placeholder="City"
+                          type="text"
+                        />
                       </FormGroup>
                     </Col>
                     <Col className="pr-1" md="4">
                       <FormGroup>
                         <label>Country</label>
-                        <Input placeholder="Country" type="text" />
+                        <Input
+                          // onChange={(event) => setCountry(event.target.value)}
+                          placeholder="Country"
+                          type="text"
+                        />
                       </FormGroup>
                     </Col>
                     <Col className="pr-1" md="2">
                       <FormGroup>
                         <label>Postal Code</label>
-                        <Input placeholder="ZIP Code" type="number" />
+                        <Input
+                          // onChange={(event) => setZip(event.target.value)}
+                          placeholder="ZIP Code"
+                          type="number"
+                        />
                       </FormGroup>
                     </Col>
                   </Row>
@@ -124,7 +210,11 @@ function User() {
                     <Col className="pr-1" md="10">
                       <FormGroup>
                         <label>Pet Name</label>
-                        <Input placeholder="Pet Name" type="text" />
+                        <Input
+                          // onChange={(event) => setPetName(event.target.value)}
+                          placeholder="Pet Name"
+                          type="text"
+                        />
                       </FormGroup>
                     </Col>
                   </Row>
@@ -133,13 +223,23 @@ function User() {
                     <Col className="pr-1" md="5">
                       <FormGroup>
                         <label>Species</label>
-                        <Input placeholder="Species" type="text" />
+                        <Input
+                          // onChange={(event) =>
+                          //   setPetSpecies(event.target.value)
+                          // }
+                          placeholder="Species"
+                          type="text"
+                        />
                       </FormGroup>
                     </Col>
                     <Col className="pr-1" md="5">
                       <FormGroup>
                         <label>Breed</label>
-                        <Input placeholder="Breed" type="text" />
+                        <Input
+                          // onChange={(event) => setPetBreed(event.target.value)}
+                          placeholder="Breed"
+                          type="text"
+                        />
                       </FormGroup>
                     </Col>
                   </Row>
@@ -150,6 +250,9 @@ function User() {
                         <label>Estimated weight in pounds</label>
                         <InputGroup>
                           <Input
+                            // onChange={(event) =>
+                            //   setPetWeight(event.target.value)
+                            // }
                             placeholder="Weight"
                             type="tel"
                             maxLength="4"
@@ -170,6 +273,7 @@ function User() {
                         <label>Estimated age in years</label>
                         <InputGroup>
                           <Input
+                            // onChange={(event) => setPetAge(event.target.value)}
                             placeholder="Years old"
                             type="tel"
                             maxLength="3"
@@ -205,13 +309,18 @@ function User() {
                     <Col className="pr-1" md="4">
                       <FormGroup>
                         <label>Departure Country</label>
-                        <Input placeholder="Departure Country" type="text" />
+                        <Input
+                          // onChange={(event) => setDCountry(event.target.value)}
+                          placeholder="Departure Country"
+                          type="text"
+                        />
                       </FormGroup>
                     </Col>
                     <Col className="pr-1" md="3">
                       <FormGroup>
                         <label>Departure City</label>
                         <Input
+                          // onChange={(event) => setDCity(event.target.value)}
                           placeholder="Departure City"
                           type="Departure City"
                         />
@@ -221,6 +330,7 @@ function User() {
                       <FormGroup>
                         <label>Departure State</label>
                         <Input
+                          // onChange={(event) => setDState(event.target.value)}
                           placeholder="Departure State"
                           type="Departure State"
                         />
@@ -232,19 +342,28 @@ function User() {
                     <Col className="pr-1" md="4">
                       <FormGroup>
                         <label>Arrival Country</label>
-                        <Input placeholder="Arrival Country" type="text" />
+                        <Input
+                          // onChange={(event) => setACountry(event.target.value)}
+                          placeholder="Arrival Country"
+                          type="text"
+                        />
                       </FormGroup>
                     </Col>
                     <Col className="pr-1" md="3">
                       <FormGroup>
                         <label>Arrival City</label>
-                        <Input placeholder="Arrival City" type="Arrival City" />
+                        <Input
+                          // onChange={(event) => setACity(event.target.value)}
+                          placeholder="Arrival City"
+                          type="Arrival City"
+                        />
                       </FormGroup>
                     </Col>
                     <Col className="pr-1" md="3">
                       <FormGroup>
                         <label>Arrival State</label>
                         <Input
+                          // onChange={(event) => setAState(event.target.value)}
                           placeholder="Arrival State"
                           type="Arrival State"
                         />
@@ -256,13 +375,21 @@ function User() {
                     <Col className="pr-1" md="5">
                       <FormGroup>
                         <label>Move Date</label>
-                        <Input placeholder="MM/DD/YYYY" type="text" />
+                        <Input
+                          // onChange={(event) => setMoveDate(event.target.value)}
+                          placeholder="MM/DD/YYYY"
+                          type="text"
+                        />
                       </FormGroup>
                     </Col>
                     <Col className="px-1" md="5">
                       <FormGroup>
                         <label>Relocation Reason</label>
-                        <Input placeholder="Relocation Reason" type="text" />
+                        <Input
+                          // onChange={(event) => setReason(event.target.value)}
+                          placeholder="Relocation Reason"
+                          type="text"
+                        />
                       </FormGroup>
                     </Col>
                   </Row>
@@ -274,6 +401,7 @@ function User() {
                       <FormGroup>
                         <label>About Me</label>
                         <Input
+                          // onChange={(event) => setAddInfo(event.target.value)}
                           cols="80"
                           placeholder="Here can be your description"
                           rows="4"
@@ -295,6 +423,7 @@ function User() {
             <div className="d-grid gap-2">
               <Link to="/">
                 <Button
+                  // onClick={submitValue}
                   className={Styles.cb}
                   style={{
                     width: "100%",
@@ -316,13 +445,12 @@ function User() {
                     Submit Form
                   </h5>
                 </Button>
-              </Link>
+              </Link>y
             </div>
           </Col>
         </Row>
         <br />
       </div>
-      {/* Break */}
     </>
   );
 }
