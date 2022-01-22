@@ -53,72 +53,97 @@ class User extends Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    if (!this.state.firstName) {
-      alert("Please fill in your first name!");
-    }
-    if (!this.state.lastName) {
-      alert("Please fill in your last name!");
-    }
-    if (!this.state.email) {
-      alert("Please fill in your email address!");
-    }
-    if (!this.state.phoneNumber) {
-      alert("Please fill in your phone number!");
-    }
-    if (!this.state.address) {
-      alert("Please fill in your home address!");
-    }
-    if (!this.state.city) {
-      alert("Please fill in your home city!");
-    }
-    if (!this.state.country) {
-      alert("Please fill in your country!");
-    }
-    if (!this.state.zip) {
-      alert("Please fill in your zip code!");
-    }
-    if (!this.state.petName) {
-      alert("Please fill in your pets name!");
-    }
-    if (!this.state.petSpecies) {
-      alert("Please fill in your pets species!");
-    }
-    if (!this.state.petBreed) {
-      alert("Please fill in your pets breed!");
-    }
-    if (!this.state.petWeight) {
-      alert("Please fill in your pets weight!");
-    }
-    if (!this.state.petAge) {
-      alert("Please fill in your pets age!");
-    }
-    if (!this.state.dCountry) {
-      alert("Please fill in your departure country!");
-    }
-    if (!this.state.dCity) {
-      alert("Please fill in your departure city!");
-    }
-    if (!this.state.dState) {
-      alert("Please fill in your departure state!");
-    }
-    if (!this.state.aCountry) {
-      alert("Please fill in your arrival country!");
-    }
-    if (!this.state.aCity) {
-      alert("Please fill in your arrival city!");
-    }
-    if (!this.state.aState) {
-      alert("Please fill in your arrival state!");
-    }
-    if (!this.state.moveDate) {
-      alert("Please fill in your move in date!");
-    }
-    if (!this.state.reason) {
-      alert("Please fill out your reason for moving!");
-    } else {
+    // if (!this.state.firstName) {
+    //   alert("Please fill in your first name!");
+    // }
+    // if (!this.state.lastName) {
+    //   alert("Please fill in your last name!");
+    // }
+    // if (!this.state.email) {
+    //   alert("Please fill in your email address!");
+    // }
+    // if (!this.state.phoneNumber) {
+    //   alert("Please fill in your phone number!");
+    // }
+    // if (!this.state.address) {
+    //   alert("Please fill in your home address!");
+    // }
+    // if (!this.state.city) {
+    //   alert("Please fill in your home city!");
+    // }
+    // if (!this.state.country) {
+    //   alert("Please fill in your country!");
+    // }
+    // if (!this.state.zip) {
+    //   alert("Please fill in your zip code!");
+    // }
+    // if (!this.state.petName) {
+    //   alert("Please fill in your pets name!");
+    // }
+    // if (!this.state.petSpecies) {
+    //   alert("Please fill in your pets species!");
+    // }
+    // if (!this.state.petBreed) {
+    //   alert("Please fill in your pets breed!");
+    // }
+    // if (!this.state.petWeight) {
+    //   alert("Please fill in your pets weight!");
+    // }
+    // if (!this.state.petAge) {
+    //   alert("Please fill in your pets age!");
+    // }
+    // if (!this.state.dCountry) {
+    //   alert("Please fill in your departure country!");
+    // }
+    // if (!this.state.dCity) {
+    //   alert("Please fill in your departure city!");
+    // }
+    // if (!this.state.dState) {
+    //   alert("Please fill in your departure state!");
+    // }
+    // if (!this.state.aCountry) {
+    //   alert("Please fill in your arrival country!");
+    // }
+    // if (!this.state.aCity) {
+    //   alert("Please fill in your arrival city!");
+    // }
+    // if (!this.state.aState) {
+    //   alert("Please fill in your arrival state!");
+    // }
+    // if (!this.state.moveDate) {
+    //   alert("Please fill in your move in date!");
+    // }
+    // if (!this.state.reason) {
+    //   alert("Please fill out your reason for moving!");
+    // }
+    if (
+      this.state.firstName &&
+      this.state.lastName &&
+      this.state.email &&
+      this.state.phoneNumber &&
+      this.state.address &&
+      this.state.city &&
+      this.state.country &&
+      this.state.zip &&
+      this.state.petName &&
+      this.state.petSpecies &&
+      this.state.petBreed &&
+      this.state.petWeight &&
+      this.state.petAge &&
+      this.state.dCountry &&
+      this.state.dCity &&
+      this.state.dState &&
+      this.state.aCountry &&
+      this.state.aCity &&
+      this.state.aState &&
+      this.state.moveDate &&
+      this.state.reason
+    ) {
       alert(
         `Thank you ${this.state.firstName} ${this.state.lastName} for submitting your information.`
       );
+    } else {
+      alert("Please fill out the empty sections of the form.");
     }
 
     this.setState({
@@ -148,6 +173,9 @@ class User extends Component {
   };
 
   render() {
+    let fillInForm = {
+      background: "red",
+    };
     return (
       <>
         <div style={{ marginTop: "10vh" }} className="content">
@@ -165,6 +193,11 @@ class User extends Component {
                         <FormGroup>
                           <label>First Name</label>
                           <Input
+                            style={{
+                              background:
+                                this.state.firstName != "" ? "" : "red",
+                            }}
+                            // style={{ background: "red" }}
                             onChange={this.handleInputChange}
                             name="firstName"
                             placeholder="First Name"
