@@ -12,7 +12,6 @@ import {
   InputGroupText,
   Row,
   Col,
-  Container,
 } from "reactstrap";
 import Button from "react-bootstrap/Button";
 import Styles from "./style.module.css";
@@ -43,9 +42,17 @@ class User extends Component {
     addInfo: "",
   };
 
+  componentDidMount() {
+    // console.log("Mount");
+    // console.log(this.state.lastName);
+  }
+  componentDidUpdate() {
+    // console.log("Update");
+    // console.log(this.state.lastName);
+  }
+
   handleInputChange = (event) => {
-    let value = event.target.value;
-    const name = event.target.name;
+    const { name, value } = event.target;
     this.setState({
       [name]: value,
     });
@@ -53,69 +60,6 @@ class User extends Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    // if (!this.state.firstName) {
-    //   alert("Please fill in your first name!");
-    // }
-    // if (!this.state.lastName) {
-    //   alert("Please fill in your last name!");
-    // }
-    // if (!this.state.email) {
-    //   alert("Please fill in your email address!");
-    // }
-    // if (!this.state.phoneNumber) {
-    //   alert("Please fill in your phone number!");
-    // }
-    // if (!this.state.address) {
-    //   alert("Please fill in your home address!");
-    // }
-    // if (!this.state.city) {
-    //   alert("Please fill in your home city!");
-    // }
-    // if (!this.state.country) {
-    //   alert("Please fill in your country!");
-    // }
-    // if (!this.state.zip) {
-    //   alert("Please fill in your zip code!");
-    // }
-    // if (!this.state.petName) {
-    //   alert("Please fill in your pets name!");
-    // }
-    // if (!this.state.petSpecies) {
-    //   alert("Please fill in your pets species!");
-    // }
-    // if (!this.state.petBreed) {
-    //   alert("Please fill in your pets breed!");
-    // }
-    // if (!this.state.petWeight) {
-    //   alert("Please fill in your pets weight!");
-    // }
-    // if (!this.state.petAge) {
-    //   alert("Please fill in your pets age!");
-    // }
-    // if (!this.state.dCountry) {
-    //   alert("Please fill in your departure country!");
-    // }
-    // if (!this.state.dCity) {
-    //   alert("Please fill in your departure city!");
-    // }
-    // if (!this.state.dState) {
-    //   alert("Please fill in your departure state!");
-    // }
-    // if (!this.state.aCountry) {
-    //   alert("Please fill in your arrival country!");
-    // }
-    // if (!this.state.aCity) {
-    //   alert("Please fill in your arrival city!");
-    // }
-    // if (!this.state.aState) {
-    //   alert("Please fill in your arrival state!");
-    // }
-    // if (!this.state.moveDate) {
-    //   alert("Please fill in your move in date!");
-    // }
-    // if (!this.state.reason) {
-    //   alert("Please fill out your reason for moving!");
-    // }
     if (
       this.state.firstName &&
       this.state.lastName &&
@@ -143,38 +87,20 @@ class User extends Component {
         `Thank you ${this.state.firstName} ${this.state.lastName} for submitting your information.`
       );
     } else {
-      alert("Please fill out the empty sections of the form.");
+      alert(
+        "Please fill out the empty sections of the form highlighted in red."
+      );
     }
-
-    this.setState({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phoneNumber: "",
-      address: "",
-      city: "",
-      country: "",
-      zip: "",
-      petName: "",
-      petSpecies: "",
-      petBreed: "",
-      petWeight: "",
-      petAge: "",
-      dCountry: "",
-      dCity: "",
-      dState: "",
-      aCountry: "",
-      aCity: "",
-      aState: "",
-      moveDate: "",
-      reason: "",
-      addInfo: "",
-    });
   };
 
   render() {
     let fillInForm = {
-      background: "red",
+      color: "red",
+      fontWeight: "bold",
+    };
+    let formFilled = {
+      color: "dimgray",
+      fontWeight: "normal",
     };
     return (
       <>
@@ -191,13 +117,14 @@ class User extends Component {
                       <Col className="pr-1" md="1" />
                       <Col className="pr-1" md="5">
                         <FormGroup>
-                          <label>First Name</label>
+                          <label
+                            style={
+                              !this.state.firstName ? fillInForm : formFilled
+                            }
+                          >
+                            First Name
+                          </label>
                           <Input
-                            style={{
-                              background:
-                                this.state.firstName != "" ? "" : "red",
-                            }}
-                            // style={{ background: "red" }}
                             onChange={this.handleInputChange}
                             name="firstName"
                             placeholder="First Name"
@@ -207,7 +134,13 @@ class User extends Component {
                       </Col>
                       <Col className="pr-1" md="5">
                         <FormGroup>
-                          <label>Last Name</label>
+                          <label
+                            style={
+                              !this.state.lastName ? fillInForm : formFilled
+                            }
+                          >
+                            Last Name
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="lastName"
@@ -221,7 +154,10 @@ class User extends Component {
                       <Col className="pr-1" md="1" />
                       <Col className="pr-1" md="5">
                         <FormGroup>
-                          <label htmlFor="exampleInputEmail1">
+                          <label
+                            style={!this.state.email ? fillInForm : formFilled}
+                            htmlFor="exampleInputEmail1"
+                          >
                             Email Address
                           </label>
                           <InputGroup>
@@ -244,7 +180,13 @@ class User extends Component {
                       </Col>
                       <Col className="pr-1" md="5">
                         <FormGroup>
-                          <label>Phone Number</label>
+                          <label
+                            style={
+                              !this.state.phoneNumber ? fillInForm : formFilled
+                            }
+                          >
+                            Phone Number
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="phoneNumber"
@@ -259,7 +201,13 @@ class User extends Component {
                       <Col className="pr-1" md="1" />
                       <Col className="pr-1" md="10">
                         <FormGroup>
-                          <label>Address</label>
+                          <label
+                            style={
+                              !this.state.address ? fillInForm : formFilled
+                            }
+                          >
+                            Address
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="address"
@@ -273,7 +221,11 @@ class User extends Component {
                       <Col className="pr-1" md="1" />
                       <Col className="pr-1" md="4">
                         <FormGroup>
-                          <label>City</label>
+                          <label
+                            style={!this.state.city ? fillInForm : formFilled}
+                          >
+                            City
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="city"
@@ -284,7 +236,13 @@ class User extends Component {
                       </Col>
                       <Col className="pr-1" md="4">
                         <FormGroup>
-                          <label>Country</label>
+                          <label
+                            style={
+                              !this.state.country ? fillInForm : formFilled
+                            }
+                          >
+                            Country
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="country"
@@ -295,7 +253,11 @@ class User extends Component {
                       </Col>
                       <Col className="pr-1" md="2">
                         <FormGroup>
-                          <label>Postal Code</label>
+                          <label
+                            style={!this.state.zip ? fillInForm : formFilled}
+                          >
+                            Postal Code
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="zip"
@@ -323,7 +285,13 @@ class User extends Component {
                       <Col className="pr-1" md="1" />
                       <Col className="pr-1" md="10">
                         <FormGroup>
-                          <label>Pet Name</label>
+                          <label
+                            style={
+                              !this.state.petName ? fillInForm : formFilled
+                            }
+                          >
+                            Pet Name
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="petName"
@@ -337,7 +305,13 @@ class User extends Component {
                       <Col className="pr-1" md="1" />
                       <Col className="pr-1" md="5">
                         <FormGroup>
-                          <label>Species</label>
+                          <label
+                            style={
+                              !this.state.petSpecies ? fillInForm : formFilled
+                            }
+                          >
+                            Species
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="petSpecies"
@@ -348,7 +322,13 @@ class User extends Component {
                       </Col>
                       <Col className="pr-1" md="5">
                         <FormGroup>
-                          <label>Breed</label>
+                          <label
+                            style={
+                              !this.state.petBreed ? fillInForm : formFilled
+                            }
+                          >
+                            Breed
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="petBreed"
@@ -362,7 +342,13 @@ class User extends Component {
                       <Col className="pr-1" md="1" />
                       <Col className="pr-1" md="5">
                         <FormGroup>
-                          <label>Estimated weight in pounds</label>
+                          <label
+                            style={
+                              !this.state.petWeight ? fillInForm : formFilled
+                            }
+                          >
+                            Estimated weight in pounds
+                          </label>
                           <InputGroup>
                             <Input
                               onChange={this.handleInputChange}
@@ -384,7 +370,11 @@ class User extends Component {
                       </Col>
                       <Col className="pr-1" md="5">
                         <FormGroup>
-                          <label>Estimated age in years</label>
+                          <label
+                            style={!this.state.petAge ? fillInForm : formFilled}
+                          >
+                            Estimated age in years
+                          </label>
                           <InputGroup>
                             <Input
                               onChange={this.handleInputChange}
@@ -423,7 +413,13 @@ class User extends Component {
                       <Col className="pr-1" md="1" />
                       <Col className="pr-1" md="4">
                         <FormGroup>
-                          <label>Departure Country</label>
+                          <label
+                            style={
+                              !this.state.dCountry ? fillInForm : formFilled
+                            }
+                          >
+                            Departure Country
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="dCountry"
@@ -434,7 +430,11 @@ class User extends Component {
                       </Col>
                       <Col className="pr-1" md="3">
                         <FormGroup>
-                          <label>Departure City</label>
+                          <label
+                            style={!this.state.dCity ? fillInForm : formFilled}
+                          >
+                            Departure City
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="dCity"
@@ -445,7 +445,11 @@ class User extends Component {
                       </Col>
                       <Col className="pr-1" md="3">
                         <FormGroup>
-                          <label>Departure State</label>
+                          <label
+                            style={!this.state.dState ? fillInForm : formFilled}
+                          >
+                            Departure State
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="dState"
@@ -459,7 +463,13 @@ class User extends Component {
                       <Col className="pr-1" md="1" />
                       <Col className="pr-1" md="4">
                         <FormGroup>
-                          <label>Arrival Country</label>
+                          <label
+                            style={
+                              !this.state.aCountry ? fillInForm : formFilled
+                            }
+                          >
+                            Arrival Country
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="aCountry"
@@ -470,7 +480,11 @@ class User extends Component {
                       </Col>
                       <Col className="pr-1" md="3">
                         <FormGroup>
-                          <label>Arrival City</label>
+                          <label
+                            style={!this.state.aCity ? fillInForm : formFilled}
+                          >
+                            Arrival City
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="aCity"
@@ -481,7 +495,11 @@ class User extends Component {
                       </Col>
                       <Col className="pr-1" md="3">
                         <FormGroup>
-                          <label>Arrival State</label>
+                          <label
+                            style={!this.state.aState ? fillInForm : formFilled}
+                          >
+                            Arrival State
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="aState"
@@ -495,7 +513,13 @@ class User extends Component {
                       <Col className="pr-1" md="1" />
                       <Col className="pr-1" md="5">
                         <FormGroup>
-                          <label>Move Date</label>
+                          <label
+                            style={
+                              !this.state.moveDate ? fillInForm : formFilled
+                            }
+                          >
+                            Move Date
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="moveDate"
@@ -506,7 +530,11 @@ class User extends Component {
                       </Col>
                       <Col className="px-1" md="5">
                         <FormGroup>
-                          <label>Relocation Reason</label>
+                          <label
+                            style={!this.state.reason ? fillInForm : formFilled}
+                          >
+                            Relocation Reason
+                          </label>
                           <Input
                             onChange={this.handleInputChange}
                             name="reason"
@@ -545,7 +573,7 @@ class User extends Component {
             <Col md={1} />
             <Col md={10}>
               <div className="d-grid gap-2">
-                {/* <Link to="/"> */}
+                {/* <Link to="/mvcts/home"> */}
                 <Button
                   onClick={this.handleFormSubmit}
                   className={Styles.cb}
